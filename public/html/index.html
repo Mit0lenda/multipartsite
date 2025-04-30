@@ -54,22 +54,22 @@
       </ul>
     </nav>
   </header>
-  
+
+  <div class="absolute top-6 w-full text-center z-30">
+    <h1 class="text-white text-2xl md:text-3xl font-bold drop-shadow">Bem-vindo à MULTIPARTS</h1>
+  </div>
 
   <!-- Home -->
-  <section id="elevador-animado" class="relative h-[300px] w-full overflow-hidden bg-gray-900 text-white">
-    <!-- Portas -->
-    <div id="porta-esquerda" class="absolute top-0 left-0 h-full w-1/2 bg-black z-20 transition-transform duration-[1500ms]"></div>
-    <div id="porta-direita" class="absolute top-0 right-0 h-full w-1/2 bg-black z-20 transition-transform duration-[1500ms]"></div>
-  
-    <!-- Conteúdo Revelado -->
-    <div id="conteudo-catalogo" class="absolute inset-0 flex justify-center items-center z-10 opacity-0 transition-opacity duration-1000">
-      <a href="#catalogo" class="text-white text-2xl font-bold bg-orange-500 px-6 py-3 rounded-lg hover:bg-orange-600 shadow-lg">
-        🔧 Conheça nosso Catálogo
-      </a>
-    </div>
-  </section>
-  
+<section id="home" class="relative h-[400px] overflow-hidden bg-black">
+  <img id="elevador-img"
+       src="/public/img/elevador/porta-fechada.png"
+       alt="Animação de elevador abrindo"
+       class="absolute inset-0 w-full h-full max-w-screen object-cover object-center transition-all duration-700 ease-in-out opacity-100 scale-100" />
+</section>
+
+   
+<!-- Transição visual entre o elevador e o "Sobre" -->
+<div class="h-12 w-full bg-gradient-to-b from-black to-gray-100"></div>
 
 <!-- Agora o novo Sobre -->
 <section id="sobre" class="relative py-20 px-6 overflow-hidden bg-gray-100">
@@ -312,18 +312,43 @@
   });
 </script>
 <script>
-    window.addEventListener("DOMContentLoaded", () => {
-      const esquerda = document.getElementById("porta-esquerda");
-      const direita = document.getElementById("porta-direita");
-      const conteudo = document.getElementById("conteudo-catalogo");
-  
-      // Delay para dar sensação de impacto
-      setTimeout(() => {
-        esquerda.classList.add("aberto-esquerda");
-        direita.classList.add("aberto-direita");
-        conteudo.classList.remove("opacity-0");
-      }, 500); // Espera 0.5s ao carregar
-    });
-  </script>
-  
+  document.addEventListener("DOMContentLoaded", () => {
+    const porta = document.getElementById("elevador-img");
+
+    const imagens = [
+      "/public/img/elevador/porta-fechada.png",
+      "/public/img/elevador/porta-meia-aberta.png",
+      "/public/img/elevador/porta-aberta-com-logo.png"
+    ];
+
+    let index = 0;
+
+    const animarPorta = () => {
+      if (index < imagens.length) {
+        // Aplica um fade-out suave
+        porta.style.opacity = "0";
+        porta.style.transform = "scale(0.98)";
+        
+        setTimeout(() => {
+          porta.src = imagens[index];
+          index++;
+          
+          // Retorna com fade-in
+          porta.style.opacity = "1";
+          porta.style.transform = "scale(1)";
+          
+          // Tempo entre imagens
+          setTimeout(animarPorta, 700); 
+        }, 300); // Duração do fade-out
+      }
+    };
+
+    setTimeout(animarPorta, 300); // Pequeno delay inicial
+  });
+</script>
+
+
+
+
+
 </html>
