@@ -1,153 +1,213 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta name="theme-color" content="#f97316">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <title>MULTIPARTS - Peças para Elevadores</title>
-        <meta name="description" content="MULTIPARTS: especialistas em peças para elevadores, fornecendo inovação, qualidade e agilidade em todo o Brasil.">
-        <meta name="keywords" content="peças para elevadores, manutenção de elevadores, acessórios de elevador, MULTIPARTS, elevadores, modernização de elevadores">
-        <meta name="author" content="MULTIPARTS Elevadores">
-        <meta property="og:title" content="MULTIPARTS - Peças para Elevadores">
-        <meta property="og:description" content="Soluções em peças de alta qualidade para elevadores, entrega rápida e atendimento de excelência.">
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="https://www.multipartselevadores.com.br">
-        <meta property="og:image" content="/public/img/logo.jpg">
-        <meta name="robots" content="index, follow">
-        
-        <!-- Favicon -->
-        <link rel="icon" type="image/png" href="/public/img/logoSemFundo.png" sizes="32x32">
-      
-        <!-- Tailwind -->
-        <script src="https://cdn.tailwindcss.com"></script>
-      
-        <!-- AOS (animações) -->
-        <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-      
-        <style>
-          html {
-            scroll-behavior: smooth;
-          }
-          * {
-            transition: all 0.3s ease-in-out;
-          }
-        </style>
-      </head>
+
+<head>
+  <meta name="theme-color" content="#f97316">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MULTIPARTS - Peças para Elevadores</title>
+  <meta name="description" content="MULTIPARTS: especialista em peças para elevadores, fornecendo inovação, qualidade e agilidade em todo o Brasil.">
+  <meta name="keywords"
+    content="peças para elevadores, manutenção de elevadores, acessórios de elevador, MULTIPARTS, elevadores, modernização de elevadores">
+  <meta name="author" content="MULTIPARTS Elevadores">
+  <meta property="og:title" content="MULTIPARTS - Peças para Elevadores">
+  <meta property="og:description"
+    content="Soluções em peças de alta qualidade para elevadores, entrega rápida e atendimento de excelência.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.multipartselevadores.com.br">
+  <meta property="og:image" content="/public/img/logo.jpg">
+  <meta name="robots" content="index, follow">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/public/img/logoSemFundo.png" sizes="32x32">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS (animações) -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    * {
+      transition: all 0.3s ease-in-out;
+    }
+  </style>
+</head>
 
 <body class="bg-white text-black font-sans">
 
   <!-- Cabeçalho -->
-  <header class="flex justify-between items-center px-4 py-2 md:py-2 border-b-2 border-orange-500 sticky top-0 bg-white z-50 h-[70px] md:h-[80px]" role="banner">
-    <img src="/public/img/logoSemFundo.png" alt="Logo MULTIPARTS"
-         class="h-12 md:h-16 object-contain max-h-full w-auto" loading="lazy">
+  <header
+    class="flex justify-between items-center px-4 py-2 md:py-2 border-b-2 border-orange-500 sticky top-0 bg-white z-50 h-[70px] md:h-[80px]"
+    role="banner">
+    <img src="/public/img/multipartes_logo_transparente.png"
+    alt="Logo MULTIPARTS"
+    class="h-12 sm:h-16 md:h-20 lg:h-24 w-auto object-contain"
+    loading="lazy">
+
+
     <nav>
       <ul class="flex gap-6">
         <li><a href="#home" class="hover:text-orange-500 font-semibold">Início</a></li>
-        <li><a href="#catalogo" class="hover:text-orange-500 font-semibold">Catálogo</a></li>
-        <li><a href="#contato" class="hover:text-orange-500 font-semibold">Contato</a></li>
         <li>
-          <a href="https://wa.me/555197664066" target="_blank"
-          class="bg-orange-500 hover:bg-orange-600 text-white py-2 px-4 rounded-md flex items-center gap-2 font-semibold transition">
-         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="white" viewBox="0 0 24 24">
-           <path d="M20.52 3.48a11.48 11.48 0 00-16.97 13.35l-1.55 5.67a.75.75 0 001 .94l5.65-1.54a11.47 11.47 0 0012.22-18.42zm-8.42 16.5a9.45 9.45 0 01-4.84-1.35l-.34-.2-3.35.91.9-3.31-.22-.35a9.48 9.48 0 0112.3-13.17 9.48 9.48 0 01-4.45 17.47zm5.4-7.6l-1.66-.79c-.23-.1-.48-.02-.61.2l-.72 1.2a8.17 8.17 0 01-3.47-3.47l1.2-.72c.21-.13.3-.38.2-.61l-.79-1.66c-.14-.28-.5-.36-.75-.2a6.5 6.5 0 00-2.97 5.52c0 3.6 2.93 6.52 6.53 6.52a6.5 6.5 0 005.53-2.96c.16-.25.08-.61-.2-.75z"/>
-         </svg>
-         WhatsApp
-       </a>
-       
+          <li><a href="#sobre" class="hover:text-orange-500 font-semibold">Sobre</a></li>
+
+          <div class="flex items-center gap-2">
+            <!-- WhatsApp -->
+            <a href="https://wa.me/555197664066" target="_blank"
+               class="flex items-center gap-1 border border-orange-500 text-black bg-white py-1.5 px-3 rounded-full hover:bg-orange-100 transition text-sm font-semibold shadow-sm">
+              <img src="/public/img/icons/whatsapp.png" alt="WhatsApp" class="w-4 h-4" />
+              WhatsApp
+            </a>
+          
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/multipartspecas" target="_blank"
+               class="flex items-center gap-1 border border-orange-500 text-black bg-white py-1.5 px-3 rounded-full hover:bg-orange-100 transition text-sm font-semibold shadow-sm">
+              <img src="/public/img/icons/instagram.png" alt="Instagram" class="w-4 h-4" />
+              Instagram
+            </a>
+          
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/share/15qZtV9Wjq/" target="_blank"
+               class="flex items-center gap-1 border border-orange-500 text-black bg-white py-1.5 px-3 rounded-full hover:bg-orange-100 transition text-sm font-semibold shadow-sm">
+              <img src="/public/img/icons/facebook.png" alt="Facebook" class="w-4 h-4" />
+              Facebook
+            </a>
+          
+            <!-- Mercado Livre -->
+            <a href="https://lista.mercadolivre.com.br/_CustId_114944990" target="_blank"
+               class="flex items-center gap-1 border border-orange-500 text-black bg-white py-1.5 px-3 rounded-full hover:bg-orange-100 transition text-sm font-semibold shadow-sm">
+              <img src="/public/img/icons/mercadolivre.png" alt="Mercado Livre" class="w-4 h-4" />
+              Mercado Livre
+            </a>
+          </div>
+          
+          
 
         </li>
       </ul>
     </nav>
   </header>
 
-  <div class="absolute top-6 w-full text-center z-30 px-4">
-    <h1 class="text-white text-xl sm:text-2xl md:text-3xl font-bold drop-shadow">Bem-vindo à MULTIPARTS</h1>
-  </div>
-  
-
   <!-- Home -->
-  <section id="home" class="relative min-h-[300px] sm:min-h-[400px] md:min-h-[500px] lg:min-h-[600px] overflow-hidden bg-black">
-    <img id="elevador-img"
-         src="/public/img/elevador/porta-fechada.png"
-         alt="Animação de elevador abrindo"
-         class="absolute inset-0 w-full h-full max-w-screen-xl mx-auto object-cover object-center transition-all duration-700 ease-in-out opacity-100 scale-100" />
+  <section id="home"
+    class="relative min-h-[300px] sm:min-h-[400px] md:min-h-[500px] lg:min-h-[600px] overflow-hidden bg-black">
+    <img id="elevador-img" src="/public/img/elevador/porta-fechada.png" alt="Animação de elevador abrindo"
+      class="absolute inset-0 w-full h-full max-w-screen-xl mx-auto object-cover object-center transition-all duration-700 ease-in-out opacity-100 scale-100" />
+  </section>
+
+  <section class="text-center mt-[-60px] z-10 relative">
+<!-- Botões abaixo do elevador -->
+<div id="botoes-elevador" class="hidden opacity-0 transition-opacity duration-700 flex flex-col sm:flex-row gap-4 justify-center items-center absolute bottom-6 left-1/2 transform -translate-x-1/2">
+  <a href="#catalogo" class="flex items-center gap-2 bg-orange-500 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:bg-orange-600 transition">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+    </svg>
+    Ver Catálogo
+  </a>
+  <a href="#contato" class="flex items-center gap-2 bg-neutral-800 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:bg-neutral-700 transition">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 10a9 9 0 11-18 0 9 9 0 0118 0z" />
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12h.01M12 12h.01M9 12h.01" />
+    </svg>
+    Falar com a Gente
+  </a>
+</div>
+
+    
   </section>
   
-
-   
-<!-- Transição visual entre o elevador e o "Sobre" -->
-<div class="h-8 sm:h-12 w-full bg-gradient-to-b from-black to-gray-100"></div>
+  <!-- Transição visual entre o elevador e o "Sobre" -->
+  <div class="h-8 sm:h-12 w-full bg-gradient-to-b from-black to-gray-100"></div>
 
 
-<!-- Agora o novo Sobre -->
+  <!-- Agora o novo Sobre -->
   <section id="sobre" class="relative py-20 px-6 overflow-hidden bg-gray-100">
 
     <!-- Fundo com Imagem + Camada de Escurecimento -->
     <div class="absolute inset-0 z-0">
-      <img src="/public/img/fundo-elevador-blur.webp" alt="Imagem Elevador" class="w-full h-full object-cover blur-[1px] opacity-20 bg-fixed" loading="lazy">
-      <div class="absolute inset-0 bg-gradient-to-b from-white/30 via-white/10 to-gray-900/20"></div> <!-- Camada degradê -->
+      <img src="/public/img/fundo-elevador-blur.webp" alt="Imagem Elevador"
+        class="w-full h-full object-cover blur-[1px] opacity-20 bg-fixed" loading="lazy">
+      <div class="absolute inset-0 bg-gradient-to-b from-white/30 via-white/10 to-gray-900/20"></div>
+      <!-- Camada degradê -->
     </div>
-  
+
     <!-- Conteúdo -->
     <div class="relative z-10 max-w-screen-xl mx-auto text-center px-6 md:px-12">
-  
+
       <!-- Título -->
-      <h2 data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-offset="200" class="text-4xl md:text-5xl font-bold text-orange-500 tracking-wide mb-8 transition-all duration-300 ease-in-out">
+      <h2 data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-offset="200"
+        class="text-4xl md:text-5xl font-bold text-orange-500 tracking-wide mb-8 transition-all duration-300 ease-in-out">
         Sobre a MULTIPARTS
       </h2>
-  
+
       <!-- Texto Principal -->
-      <p data-aos="fade-up" data-aos-delay="150" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-offset="200"
+      <p data-aos="fade-up" data-aos-delay="150" data-aos-duration="800" data-aos-easing="ease-in-out"
+        data-aos-offset="200"
         class="text-gray-800 max-w-3xl mx-auto leading-relaxed text-lg md:text-xl mb-16 transition-all duration-300 ease-in-out">
-        Com mais de 13 anos de experiência, a <strong class="text-orange-500">MULTIPARTS</strong> é referência nacional em peças para elevadores, oferecendo soluções com qualidade, inovação e agilidade.
-        Atendemos condomínios, empresas e profissionais em todo o Brasil, sempre focados na excelência e no compromisso com nossos clientes.
+        Fundada em 2022, a <strong class="text-orange-500">MULTIPARTS</strong> é especializada no comércio de peças para elevadores multimarcas.
+        Localizada em Guaíba, no Rio Grande do Sul, nossa empresa atende empresas mantenedoras e profissionais do setor de elevadores, oferecendo soluções práticas, ágeis e confiáveis.
+        Na MULTIPARTS, você encontra parceria e confiança para manter seu trabalho em movimento.
       </p>
-  
+
       <!-- Blocos de Valores -->
       <div class="grid gap-12 grid-cols-1 sm:grid-cols-3 text-center">
-  
+
         <!-- Confiança -->
-        <div data-aos="fade-up" data-aos-delay="300" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-offset="200"
+        <div data-aos="fade-up" data-aos-delay="300" data-aos-duration="800" data-aos-easing="ease-in-out"
+          data-aos-offset="200"
           class="flex flex-col items-center transition transform hover:scale-105 ease-in-out duration-300">
           <div class="bg-orange-100 p-6 rounded-full mb-4 shadow-lg">
-            <img src="/public/img/icons/aperto.png" alt="Ícone Confiança" class="h-16 w-16 object-contain" loading="lazy">
+            <img src="/public/img/icons/aperto.png" alt="Ícone Confiança" class="h-16 w-16 object-contain"
+              loading="lazy">
           </div>
           <h3 class="text-xl font-semibold text-gray-800 mb-2">Confiança</h3>
           <p class="text-gray-700 text-sm">Comprometimento com prazos e qualidade.</p>
         </div>
-  
+
         <!-- Inovação -->
-        <div data-aos="fade-up" data-aos-delay="450" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-offset="200"
+        <div data-aos="fade-up" data-aos-delay="450" data-aos-duration="800" data-aos-easing="ease-in-out"
+          data-aos-offset="200"
           class="flex flex-col items-center transition transform hover:scale-105 ease-in-out duration-300">
           <div class="bg-orange-100 p-6 rounded-full mb-4 shadow-lg">
-            <img src="/public/img/icons/lampada.png" alt="Ícone Inovação" class="h-16 w-16 object-contain" loading="lazy">
+            <img src="/public/img/icons/lampada.png" alt="Ícone Inovação" class="h-16 w-16 object-contain"
+              loading="lazy">
           </div>
           <h3 class="text-xl font-semibold text-gray-800 mb-2">Inovação</h3>
           <p class="text-gray-700 text-sm">Soluções modernas para o transporte vertical.</p>
         </div>
-  
+
         <!-- Excelência -->
-        <div data-aos="fade-up" data-aos-delay="600" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-offset="200"
+        <div data-aos="fade-up" data-aos-delay="600" data-aos-duration="800" data-aos-easing="ease-in-out"
+          data-aos-offset="200"
           class="flex flex-col items-center transition transform hover:scale-105 ease-in-out duration-300">
           <div class="bg-orange-100 p-6 rounded-full mb-4 shadow-lg">
-            <img src="/public/img/icons/trofeu.png" alt="Ícone Excelência" class="h-16 w-16 object-contain" loading="lazy">
+            <img src="/public/img/icons/trofeu.png" alt="Ícone Excelência" class="h-16 w-16 object-contain"
+              loading="lazy">
           </div>
           <h3 class="text-xl font-semibold text-gray-800 mb-2">Excelência</h3>
           <p class="text-gray-700 text-sm">Atendimento e produtos de alta qualidade.</p>
         </div>
-  
+
       </div>
-  
+
     </div>
   </section>
-  
+
   <!-- Botão WhatsApp Flutuante -->
-  <a href="https://wa.me/555197664066" target="_blank" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all duration-300 animate-pulse z-50">
-    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M20.52 3.48a11.48 11.48 0 00-16.97 13.35l-1.55 5.67a.75.75 0 001 .94l5.65-1.54a11.47 11.47 0 0012.22-18.42zm-8.42 16.5a9.45 9.45 0 01-4.84-1.35l-.34-.2-3.35.91.9-3.31-.22-.35a9.48 9.48 0 0112.3-13.17 9.48 9.48 0 01-4.45 17.47zm5.4-7.6l-1.66-.79c-.23-.1-.48-.02-.61.2l-.72 1.2a8.17 8.17 0 01-3.47-3.47l1.2-.72c.21-.13.3-.38.2-.61l-.79-1.66c-.14-.28-.5-.36-.75-.2a6.5 6.5 0 00-2.97 5.52c0 3.6 2.93 6.52 6.53 6.52a6.5 6.5 0 005.53-2.96c.16-.25.08-.61-.2-.75z"/>
+  <a href="https://wa.me/555197664066" target="_blank"
+    class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all duration-300 z-50">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" viewBox="0 0 24 24" fill="currentColor">
+      <path
+        d="M12 0C5.373 0 0 5.373 0 12c0 2.116.553 4.121 1.6 5.906L0 24l6.305-1.61A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm.01 22.07a9.957 9.957 0 01-5.08-1.395l-.365-.217-3.739.954.998-3.65-.238-.376a9.992 9.992 0 1118.533-2.564 9.991 9.991 0 01-10.11 7.248zm5.31-7.57c-.286-.144-1.693-.835-1.955-.93-.262-.095-.453-.143-.645.144-.191.286-.74.929-.91 1.12-.167.191-.335.215-.621.072-.286-.144-1.209-.446-2.3-1.423-.85-.757-1.424-1.692-1.592-1.978-.167-.286-.018-.44.126-.583.13-.13.287-.335.43-.502.144-.167.191-.287.287-.478.096-.191.048-.358-.024-.502-.072-.144-.645-1.556-.883-2.133-.232-.558-.47-.482-.645-.49l-.55-.009a1.055 1.055 0 00-.76.353c-.262.286-.998.974-.998 2.375s1.02 2.755 1.162 2.944c.144.191 2.009 3.07 4.87 4.3.681.294 1.212.47 1.626.601.682.217 1.302.186 1.79.113.546-.08 1.693-.692 1.931-1.36.238-.668.238-1.241.167-1.36-.07-.12-.262-.191-.548-.334z" />
     </svg>
   </a>
+
 
   <!-- Catálogo -->
   <section id="catalogo" class="py-12 px-6 bg-gray-50">
@@ -156,21 +216,25 @@
     <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
 
       <!-- Exemplo de Marca (modelo para todas) -->
-      <div class="relative group bg-gray-100 p-6 rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:scale-105 hover:min-h-[350px] flex flex-col justify-center items-center">
+      <div
+        class="relative group bg-gray-100 p-6 rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:scale-105 hover:min-h-[350px] flex flex-col justify-center items-center">
         <h2 class="text-2xl font-bold text-orange-500 text-center z-0">Atlas Schindler</h2>
         <div class="opacity-0 group-hover:opacity-100 transition duration-500 w-full mt-4">
           <div class="grid grid-cols-2 gap-4 items-center">
             <div class="flex flex-col items-center">
-              <img src="./img/produto1.jpg" alt="Produto 1" class="w-20 h-20 object-contain aspect-square rounded-md mb-2" loading="lazy">
+              <img src="./img/produto1.jpg" alt="Produto 1"
+                class="w-20 h-20 object-contain aspect-square rounded-md mb-2" loading="lazy">
               <p class="text-sm text-white font-semibold">Painel Modernizado</p>
             </div>
             <div class="flex flex-col items-center">
-              <img src="./img/produto2.jpg" alt="Produto 1" class="w-20 h-20 object-contain aspect-square rounded-md mb-2" loading="lazy">
+              <img src="./img/produto2.jpg" alt="Produto 1"
+                class="w-20 h-20 object-contain aspect-square rounded-md mb-2" loading="lazy">
               <p class="text-sm text-white font-semibold">Motor de Tração</p>
             </div>
           </div>
           <div class="mt-6 flex justify-center">
-            <a href="#" target="_blank" class="bg-white text-red-600 font-bold py-2 px-4 rounded hover:bg-gray-100">Compre com a gente</a>
+            <a href="#" target="_blank"
+              class="bg-white text-red-600 font-bold py-2 px-4 rounded hover:bg-gray-100">Compre com a gente</a>
           </div>
         </div>
       </div>
@@ -182,7 +246,7 @@
 
   <!-- Contato -->
   <section id="contato" class="py-12 px-6">
-    <h1 class="text-4xl font-bold text-center mb-12">Entre em Contato</h1>
+    <h1 class="text-4xl font-bold text-center mb-12">Entre em contato</h1>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
 
@@ -194,31 +258,37 @@
 
         <div>
           <label for="nome" class="block text-gray-700 font-semibold mb-2">Nome Completo *</label>
-          <input type="text" id="nome" name="nome" required class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-500">
+          <input type="text" id="nome" name="nome" required
+            class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-500">
         </div>
 
         <div>
           <label for="telefone" class="block text-gray-700 font-semibold mb-2">Telefone *</label>
-          <input type="text" id="telefone" name="telefone" required class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-500">
+          <input type="text" id="telefone" name="telefone" required
+            class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-500">
         </div>
 
         <div>
           <label for="email" class="block text-gray-700 font-semibold mb-2">E-mail *</label>
-          <input type="email" id="email" name="email" required class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-500">
+          <input type="email" id="email" name="email" required
+            class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-500">
         </div>
 
         <div>
           <label for="assunto" class="block text-gray-700 font-semibold mb-2">Assunto</label>
-          <input type="text" id="assunto" name="assunto" class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-500">
+          <input type="text" id="assunto" name="assunto"
+            class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-500">
         </div>
 
         <div>
           <label for="mensagem" class="block text-gray-700 font-semibold mb-2">Mensagem *</label>
-          <textarea id="mensagem" name="mensagem" required rows="5" class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-500"></textarea>
+          <textarea id="mensagem" name="mensagem" required rows="5"
+            class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-500"></textarea>
         </div>
 
         <div class="text-center">
-          <button type="submit" class="bg-orange-500 text-white font-bold py-3 px-6 rounded hover:bg-orange-600 transition">
+          <button type="submit"
+            class="bg-orange-500 text-white font-bold py-3 px-6 rounded hover:bg-orange-600 transition">
             Enviar
           </button>
         </div>
@@ -233,7 +303,7 @@
 
         <div>
           <p class="font-semibold text-gray-700">Telefone:</p>
-          <p class="text-gray-600">(51) 9766-4066</p>
+          <p class="text-gray-600">(51) 99766-4066</p>
         </div>
 
         <div>
@@ -243,19 +313,9 @@
 
         <div>
           <p class="font-semibold text-gray-700">Endereço:</p>
-          <p class="text-gray-600">Av. Paulista, 1000 - São Paulo/SP</p>
+          <p class="text-gray-600"> Rua Dona Frutuosa, 16 - Sala 9 - Guaíba/RS</p>
         </div>
 
-        <div>
-          <a href="https://wa.me/555197664066" target="_blank"
-          class="bg-orange-500 hover:bg-orange-600 text-white py-2 px-4 rounded-md flex items-center gap-2 font-semibold transition">
-         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="white" viewBox="0 0 24 24">
-           <path d="M20.52 3.48a11.48 11.48 0 00-16.97 13.35l-1.55 5.67a.75.75 0 001 .94l5.65-1.54a11.47 11.47 0 0012.22-18.42zm-8.42 16.5a9.45 9.45 0 01-4.84-1.35l-.34-.2-3.35.91.9-3.31-.22-.35a9.48 9.48 0 0112.3-13.17 9.48 9.48 0 01-4.45 17.47zm5.4-7.6l-1.66-.79c-.23-.1-.48-.02-.61.2l-.72 1.2a8.17 8.17 0 01-3.47-3.47l1.2-.72c.21-.13.3-.38.2-.61l-.79-1.66c-.14-.28-.5-.36-.75-.2a6.5 6.5 0 00-2.97 5.52c0 3.6 2.93 6.52 6.53 6.52a6.5 6.5 0 005.53-2.96c.16-.25.08-.61-.2-.75z"/>
-         </svg>
-         WhatsApp
-       </a>
-       
-        </div>
       </div>
 
     </div>
@@ -264,57 +324,58 @@
   <!-- Rodapé -->
   <footer class="bg-black text-white py-12 px-6 text-center md:text-left" role="contentinfo">
     <div class="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-  
+
       <!-- Bloco 1: Sobre a Empresa -->
       <div>
         <h2 class="text-2xl font-bold text-orange-500 mb-4">MULTIPARTS</h2>
         <p class="text-gray-400 leading-relaxed">
-          Especialistas em peças para elevadores há mais de 13 anos, levando inovação e qualidade para todo o Brasil.
-          Soluções modernas, entrega rápida e atendimento de excelência.
+          Fundada em 2022 e localizada em Guaíba/RS, a MULTIPARTS é especialista em peças para elevadores multimarcas.
+  Levamos qualidade, agilidade e confiança para todo o Brasil.
         </p>
       </div>
-  
+
       <!-- Bloco 2: Contato -->
       <div class="space-y-4">
-        <p><span class="font-semibold text-gray-200">Telefone:</span> (51) 9766-4066</p>
+        <p><span class="font-semibold text-gray-200">Telefone:</span> (51) 99766-4066</p>
         <p><span class="font-semibold text-gray-200">E-mail:</span> contato@multipartselevadores.com.br</p>
-        <p><span class="font-semibold text-gray-200">Endereço:</span> Av. Paulista, 1000 - São Paulo/SP</p>
+        <p><span class="font-semibold text-gray-200">Endereço:</span> Rua Dona Frutuosa, 16 - Sala 9 - Guaíba/RS</p>
       </div>
-  
+
     </div>
-  
+
     <!-- Redes Sociais -->
-<div class="flex justify-center items-center gap-6 mt-6">
-  
-    <a href="https://wa.me/555197664066" target="_blank" aria-label="WhatsApp" 
-      class="transform transition duration-300 hover:scale-110 hover:drop-shadow-[0_0_5px_#f97316]">
-      <img src="/public/img/icons/whatsapp.png" alt="WhatsApp" class="h-8 w-8">
-    </a>
-  
-    <a href="https://www.instagram.com/multipartspecas?igsh=MTNkcnNpMGc5bXBxbA==" target="_blank" aria-label="Instagram" 
-      class="transform transition duration-300 hover:scale-110 hover:drop-shadow-[0_0_5px_#f97316]">
-      <img src="/public/img/icons/instagram.png" alt="Instagram" class="h-8 w-8">
-    </a>
-  
-    <a href="https://www.facebook.com/share/15qZtV9Wjq/" target="_blank" aria-label="Facebook" 
-      class="transform transition duration-300 hover:scale-110 hover:drop-shadow-[0_0_5px_#f97316]">
-      <img src="/public/img/icons/facebook.png" alt="Facebook" class="h-8 w-8">
-    </a>
-  
-    <a href="https://lista.mercadolivre.com.br/_CustId_114944990" target="_blank" aria-label="Mercado Livre" 
-      class="transform transition duration-300 hover:scale-110 hover:drop-shadow-[0_0_5px_#f97316]">
-      <img src="/public/img/icons/mercadolivre.png" alt="Mercado Livre" class="h-8 w-8">
-    </a>
-  
-  </div>
-  
-  
+    <div class="flex justify-center items-center gap-6 mt-6">
+
+      <a href="https://wa.me/555197664066" target="_blank" aria-label="WhatsApp"
+        class="transform transition duration-300 hover:scale-110 hover:drop-shadow-[0_0_5px_#f97316]">
+        <img src="/public/img/icons/whatsapp.png" alt="WhatsApp" class="h-8 w-8">
+      </a>
+
+      <a href="https://www.instagram.com/multipartspecas?igsh=MTNkcnNpMGc5bXBxbA==" target="_blank"
+        aria-label="Instagram"
+        class="transform transition duration-300 hover:scale-110 hover:drop-shadow-[0_0_5px_#f97316]">
+        <img src="/public/img/icons/instagram.png" alt="Instagram" class="h-8 w-8">
+      </a>
+
+      <a href="https://www.facebook.com/share/15qZtV9Wjq/" target="_blank" aria-label="Facebook"
+        class="transform transition duration-300 hover:scale-110 hover:drop-shadow-[0_0_5px_#f97316]">
+        <img src="/public/img/icons/facebook.png" alt="Facebook" class="h-8 w-8">
+      </a>
+
+      <a href="https://lista.mercadolivre.com.br/_CustId_114944990" target="_blank" aria-label="Mercado Livre"
+        class="transform transition duration-300 hover:scale-110 hover:drop-shadow-[0_0_5px_#f97316]">
+        <img src="/public/img/icons/mercadolivre.png" alt="Mercado Livre" class="h-8 w-8">
+      </a>
+
+    </div>
+
+
     <!-- Direitos Autorais -->
     <div class="mt-12 border-t border-gray-700 pt-6 text-sm text-gray-500 text-center">
       &copy; 2025 MULTIPARTS - Todos os direitos reservados.
     </div>
   </footer>
-  
+
 </body>
 <!-- AOS Animações -->
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
@@ -327,10 +388,12 @@
   });
 </script>
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
   if (window.innerWidth <= 400) return;
 
   const porta = document.getElementById("elevador-img");
+  const botoes = document.getElementById("botoes-elevador");
+
   const imagens = [
     "/public/img/elevador/porta-fechada.png",
     "/public/img/elevador/porta-meia-aberta.png",
@@ -343,13 +406,23 @@
     if (index < imagens.length) {
       porta.style.opacity = "0";
       porta.style.transform = "scale(0.98)";
-      
+
       setTimeout(() => {
         porta.src = imagens[index];
-        index++;
         porta.style.opacity = "1";
         porta.style.transform = "scale(1)";
-        setTimeout(animarPorta, 700); 
+        index++;
+
+        if (index === imagens.length) {
+          setTimeout(() => {
+            botoes.classList.remove("hidden");
+            setTimeout(() => {
+              botoes.classList.add("opacity-100");
+            }, 100);
+          }, 800);
+        } else {
+          setTimeout(animarPorta, 700);
+        }
       }, 300);
     }
   };
@@ -358,9 +431,6 @@
 });
 
 </script>
-
-
-
 
 
 </html>
