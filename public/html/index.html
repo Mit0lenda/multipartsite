@@ -209,40 +209,193 @@
   </a>
 
 
-  <!-- Catálogo -->
-  <section id="catalogo" class="py-12 px-6 bg-gray-50">
-    <h1 class="text-4xl font-bold text-center mb-12">Escolha a Marca do Elevador</h1>
+  <section id="catalogo" class="py-16 px-6 bg-gray-50">
+    <h2 class="text-3xl font-bold text-center mb-12">Escolha a Marca do Elevador</h2>
+  
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+  
+    <!-- Lista de marcas -->
+    <!-- Substitua os conteúdos de cada marca conforme necessário -->
 
-    <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+    <!-- Wittur -->
+<div onclick="openModal('modalWittur')" class="cursor-pointer bg-[#e8f3f1] p-6 rounded-xl shadow-md text-center hover:shadow-lg transition transform hover:scale-105">
+  <img src="/public/img/marcas/wittur.png" alt="Logo Wittur" class="h-32 mx-auto object-contain">
+</div>
 
-      <!-- Exemplo de Marca (modelo para todas) -->
-      <div
-        class="relative group bg-gray-100 p-6 rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:scale-105 hover:min-h-[350px] flex flex-col justify-center items-center">
-        <h2 class="text-2xl font-bold text-orange-500 text-center z-0">Atlas Schindler</h2>
-        <div class="opacity-0 group-hover:opacity-100 transition duration-500 w-full mt-4">
-          <div class="grid grid-cols-2 gap-4 items-center">
-            <div class="flex flex-col items-center">
-              <img src="./img/produto1.jpg" alt="Produto 1"
-                class="w-20 h-20 object-contain aspect-square rounded-md mb-2" loading="lazy">
-              <p class="text-sm text-white font-semibold">Painel Modernizado</p>
-            </div>
-            <div class="flex flex-col items-center">
-              <img src="./img/produto2.jpg" alt="Produto 1"
-                class="w-20 h-20 object-contain aspect-square rounded-md mb-2" loading="lazy">
-              <p class="text-sm text-white font-semibold">Motor de Tração</p>
-            </div>
-          </div>
-          <div class="mt-6 flex justify-center">
-            <a href="#" target="_blank"
-              class="bg-white text-red-600 font-bold py-2 px-4 rounded hover:bg-gray-100">Compre com a gente</a>
-          </div>
-        </div>
-      </div>
+<!-- Atlas Schindler -->
+<div onclick="openModal('modalAtlas')" class="cursor-pointer bg-[#fcecec] p-6 rounded-xl shadow-md text-center hover:shadow-lg transition transform hover:scale-105">
+  <img src="/public/img/marcas/atlas_Schindler.png" alt="Logo Atlas Schindler" class="h-32
+   mx-auto object-contain">
+</div>
 
-      <!-- Adicionar outras marcas como Thyssenkrupp, Otis, Villarta etc, copiando o modelo acima -->
+<!-- TKE -->
+<div onclick="openModal('modalTKE')" class="cursor-pointer bg-[#fdf0e7] p-6 rounded-xl shadow-md text-center hover:shadow-lg transition transform hover:scale-105">
+  <img src="/public/img/marcas/TKE.png" alt="Logo TKE" class="h-32
+   mx-auto object-contain">
+</div>
 
+<!-- Otis -->
+<div onclick="openModal('modalOtis')" class="cursor-pointer bg-[#ebeffa] p-6 rounded-xl shadow-md text-center hover:shadow-lg transition transform hover:scale-105">
+  <img src="/public/img/marcas/otis.png" alt="Logo Otis" class="h-32
+   mx-auto object-contain">
+</div>
+
+<!-- Fermator -->
+<div onclick="openModal('modalFermator')" class="cursor-pointer bg-[#e6f0f2] p-6 rounded-xl shadow-md text-center hover:shadow-lg transition transform hover:scale-105">
+  <img src="/public/img/marcas/fermator.png" alt="Logo Fermator" class="h-32
+   mx-auto object-contain">
+</div>
+
+<!-- Unidigital -->
+<div onclick="openModal('modalUnidigital')" class="cursor-pointer bg-[#f2f0f7] p-6 rounded-xl shadow-md text-center hover:shadow-lg transition transform hover:scale-105">
+  <img src="/public/img/marcas/unidigital.png" alt="Logo Unidigital" class="h-32
+   mx-auto object-contain">
+</div>
+
+<!-- Diversas -->
+<div onclick="openModal('modalDiversas')" class="cursor-pointer bg-[#f5f5f5] p-6 rounded-xl shadow-md text-center hover:shadow-lg transition transform hover:scale-105">
+  <img src="/public/img/marcas/diversas.png" alt="Logo Diversas" class="h-32
+   mx-auto object-contain">
+</div>
+
+  </div>
     </div>
+  
+<!-- Wittur Modal -->
+<div id="modalWittur" class="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50 hidden">
+  <div class="bg-[#2f3b38] text-white p-6 rounded-xl shadow-xl w-full max-w-md relative">
+    <button onclick="closeModal('modalWittur')" class="absolute top-2 right-3 text-white hover:text-gray-200 text-2xl font-bold">&times;</button>
+    <h2 class="text-xl font-bold mb-4">Peças Wittur</h2>
+    <div class="grid grid-cols-2 gap-4 mb-6">
+      <div class="flex flex-col items-center">
+        <img src="/public/img/produtos/painel.jpg" class="w-24 h-24 object-cover rounded shadow" alt="Painel">
+        <span class="text-sm mt-1">Painel</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="/public/img/produtos/motor.jpg" class="w-24 h-24 object-cover rounded shadow" alt="Motor">
+        <span class="text-sm mt-1">Motor</span>
+      </div>
+    </div>
+    <a href="https://lista.mercadolivre.com.br/_CustId_114944990#D[A:wittur]" target="_blank" class="block text-center bg-white text-[#2f3b38] font-bold py-2 px-4 rounded-lg transition hover:bg-gray-200">Compre com a gente</a>
+  </div>
+</div>
+
+<!-- Atlas Schindler Modal -->
+<div id="modalAtlas" class="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50 hidden">
+  <div class="bg-[#e60000] text-white p-6 rounded-xl shadow-xl w-full max-w-md relative">
+    <button onclick="closeModal('modalAtlas')" class="absolute top-2 right-3 text-white hover:text-gray-200 text-2xl font-bold">&times;</button>
+    <h2 class="text-xl font-bold mb-4">Peças Atlas Schindler</h2>
+    <div class="grid grid-cols-2 gap-4 mb-6">
+      <div class="flex flex-col items-center">
+        <img src="/public/img/produtos/painel.jpg" class="w-24 h-24 object-cover rounded shadow" alt="Painel">
+        <span class="text-sm mt-1">Painel</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="/public/img/produtos/motor.jpg" class="w-24 h-24 object-cover rounded shadow" alt="Motor">
+        <span class="text-sm mt-1">Motor</span>
+      </div>
+    </div>
+    <a href="https://lista.mercadolivre.com.br/_CustId_114944990#D[A:atlas%20schindler]" target="_blank" class="block text-center bg-white text-[#e60000] font-bold py-2 px-4 rounded-lg transition hover:bg-gray-200">Compre com a gente</a>
+  </div>
+</div>
+
+<!-- TKE Modal -->
+<div id="modalTKE" class="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50 hidden">
+  <div class="bg-[#ff6b00] text-white p-6 rounded-xl shadow-xl w-full max-w-md relative">
+    <button onclick="closeModal('modalTKE')" class="absolute top-2 right-3 text-white hover:text-gray-200 text-2xl font-bold">&times;</button>
+    <h2 class="text-xl font-bold mb-4">Peças TKE</h2>
+    <div class="grid grid-cols-2 gap-4 mb-6">
+      <div class="flex flex-col items-center">
+        <img src="/public/img/produtos/painel.jpg" class="w-24 h-24 object-cover rounded shadow" alt="Painel">
+        <span class="text-sm mt-1">Painel</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="/public/img/produtos/motor.jpg" class="w-24 h-24 object-cover rounded shadow" alt="Motor">
+        <span class="text-sm mt-1">Motor</span>
+      </div>
+    </div>
+    <a href="https://lista.mercadolivre.com.br/_CustId_114944990#D[A:tke]" target="_blank" class="block text-center bg-white text-[#ff6b00] font-bold py-2 px-4 rounded-lg transition hover:bg-gray-200">Compre com a gente</a>
+  </div>
+</div>
+
+<!-- Otis Modal -->
+<div id="modalOtis" class="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50 hidden">
+  <div class="bg-[#003a70] text-white p-6 rounded-xl shadow-xl w-full max-w-md relative">
+    <button onclick="closeModal('modalOtis')" class="absolute top-2 right-3 text-white hover:text-gray-200 text-2xl font-bold">&times;</button>
+    <h2 class="text-xl font-bold mb-4">Peças Otis</h2>
+    <div class="grid grid-cols-2 gap-4 mb-6">
+      <div class="flex flex-col items-center">
+        <img src="/public/img/produtos/painel.jpg" class="w-24 h-24 object-cover rounded shadow" alt="Painel">
+        <span class="text-sm mt-1">Painel</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="/public/img/produtos/motor.jpg" class="w-24 h-24 object-cover rounded shadow" alt="Motor">
+        <span class="text-sm mt-1">Motor</span>
+      </div>
+    </div>
+    <a href="https://lista.mercadolivre.com.br/_CustId_114944990#D[A:otis]" target="_blank" class="block text-center bg-white text-[#003a70] font-bold py-2 px-4 rounded-lg transition hover:bg-gray-200">Compre com a gente</a>
+  </div>
+</div>
+
+<!-- Fermator Modal -->
+<div id="modalFermator" class="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50 hidden">
+  <div class="bg-[#2c3e50] text-white p-6 rounded-xl shadow-xl w-full max-w-md relative">
+    <button onclick="closeModal('modalFermator')" class="absolute top-2 right-3 text-white hover:text-gray-200 text-2xl font-bold">&times;</button>
+    <h2 class="text-xl font-bold mb-4">Peças Fermator</h2>
+    <div class="grid grid-cols-2 gap-4 mb-6">
+      <div class="flex flex-col items-center">
+        <img src="/public/img/produtos/painel.jpg" class="w-24 h-24 object-cover rounded shadow" alt="Painel">
+        <span class="text-sm mt-1">Painel</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="/public/img/produtos/motor.jpg" class="w-24 h-24 object-cover rounded shadow" alt="Motor">
+        <span class="text-sm mt-1">Motor</span>
+      </div>
+    </div>
+    <a href="https://lista.mercadolivre.com.br/_CustId_114944990#D[A:fermator]" target="_blank" class="block text-center bg-white text-[#2c3e50] font-bold py-2 px-4 rounded-lg transition hover:bg-gray-200">Compre com a gente</a>
+  </div>
+</div>
+
+<!-- Unidigital Modal -->
+<div id="modalUnidigital" class="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50 hidden">
+  <div class="bg-[#4b0082] text-white p-6 rounded-xl shadow-xl w-full max-w-md relative">
+    <button onclick="closeModal('modalUnidigital')" class="absolute top-2 right-3 text-white hover:text-gray-200 text-2xl font-bold">&times;</button>
+    <h2 class="text-xl font-bold mb-4">Peças Unidigital</h2>
+    <div class="grid grid-cols-2 gap-4 mb-6">
+      <div class="flex flex-col items-center">
+        <img src="/public/img/produtos/painel.jpg" class="w-24 h-24 object-cover rounded shadow" alt="Painel">
+        <span class="text-sm mt-1">Painel</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="/public/img/produtos/motor.jpg" class="w-24 h-24 object-cover rounded shadow" alt="Motor">
+        <span class="text-sm mt-1">Motor</span>
+      </div>
+    </div>
+    <a href="https://lista.mercadolivre.com.br/_CustId_114944990#D[A:unidigital]" target="_blank" class="block text-center bg-white text-[#4b0082] font-bold py-2 px-4 rounded-lg transition hover:bg-gray-200">Compre com a gente</a>
+  </div>
+</div>
+
+<!-- Diversas Modal -->
+<div id="modalDiversas" class="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50 hidden">
+  <div class="bg-[#333] text-white p-6 rounded-xl shadow-xl w-full max-w-md relative">
+    <button onclick="closeModal('modalDiversas')" class="absolute top-2 right-3 text-white hover:text-gray-200 text-2xl font-bold">&times;</button>
+    <h2 class="text-xl font-bold mb-4">Peças Diversas</h2>
+    <div class="grid grid-cols-2 gap-4 mb-6">
+      <div class="flex flex-col items-center">
+        <img src="/public/img/produtos/painel.jpg" class="w-24 h-24 object-cover rounded shadow" alt="Painel">
+        <span class="text-sm mt-1">Painel</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="/public/img/produtos/motor.jpg" class="w-24 h-24 object-cover rounded shadow" alt="Motor">
+        <span class="text-sm mt-1">Motor</span>
+      </div>
+    </div>
+    <a href="https://lista.mercadolivre.com.br/_CustId_114944990" target="_blank" class="block text-center bg-white text-[#333] font-bold py-2 px-4 rounded-lg transition hover:bg-gray-200">Compre com a gente</a>
+  </div>
+</div>
+
   </section>
+  
 
   <!-- Contato -->
   <section id="contato" class="py-12 px-6">
@@ -375,7 +528,15 @@
       &copy; 2025 MULTIPARTS - Todos os direitos reservados.
     </div>
   </footer>
-
+  <script>
+    function openModal(id) {
+      document.getElementById(id).classList.remove('hidden');
+    }
+  
+    function closeModal(id) {
+      document.getElementById(id).classList.add('hidden');
+    }
+  </script>
 </body>
 <!-- AOS Animações -->
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
@@ -431,6 +592,4 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 </script>
-
-
 </html>
