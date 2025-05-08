@@ -30,14 +30,44 @@
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
   <style>
-    html {
-      scroll-behavior: smooth;
+    /* Todas as portas */
+    .door {
+      position: absolute;
+      /* sobrepõe no mesmo container */
+      top: 0;
+      height: 100%;
+      width: 50%;
+      object-fit: cover;
+      transition: transform .8s ease-in-out, opacity .4s ease-out;
     }
 
-    * {
-      transition: all 0.3s ease-in-out;
+    /* Porta sai para a esquerda */
+    .door-left {
+      left: 0;
+      transform: translateX(0);
+    }
+
+    .door-open-left {
+      transform: translateX(-100%);
+    }
+
+    /* Porta sai para a direita */
+    .door-right {
+      right: 0;
+      transform: translateX(0);
+    }
+
+    .door-open-right {
+      transform: translateX(100%);
+    }
+
+    /* Some completamente após abrir */
+    .door-fade {
+      opacity: 0;
+      pointer-events: none;
     }
   </style>
+
 </head>
 
 <body class="bg-white text-black font-sans">
@@ -94,11 +124,29 @@
   </header>
 
   <!-- Home -->
-  <section id="home"
-    class="relative min-h-[300px] sm:min-h-[400px] md:min-h-[500px] lg:min-h-[600px] overflow-hidden bg-black">
-    <img id="elevador-img" src="/public/img/elevador/porta-fechada.png" alt="Animação de elevador abrindo"
-      class="absolute inset-0 w-full h-full max-w-screen-xl mx-auto object-cover object-center transition-all duration-700 ease-in-out opacity-100 scale-100" />
+  <section id="home" class="relative min-h-[300px] sm:min-h-[400px] md:min-h-[500px] lg:min-h-[600px] overflow-hidden">
+
+    <!-- Imagem de fundo -->
+    <div class="absolute inset-0 z-0">
+      <div class="absolute inset-0 bg-[url('/public/img/elevador/elevador.png')] bg-cover bg-center"></div>
+      <div class="absolute inset-0 bg-white/90"></div> <!-- <- Overlay branco a 70% -->
+    </div>
+
+    <!-- Logo ao fundo (fica escondido até as portas abrirem) -->
+    <img id="logo-elevador" src="/public/img/multipartes_logo_transparente.png"
+      class="absolute inset-0 top-[-10%] m-auto w-64 sm:w-80 md:w-96 lg:w-[500px] opacity-0 transition-opacity duration-700 z-10"
+      alt="Logo MULTIPARTS" loading="lazy" />
+
+    <!-- Porta esquerda -->
+    <img id="porta-esquerda" src="/public/img/elevador/image (1).png" class="door door-left z-10"
+      alt="Porta esquerda do elevador" loading="lazy" />
+
+    <!-- Porta direita -->
+    <img id="porta-direita" src="/public/img/elevador/image (1).png" class="door door-right z-10"
+      alt="Porta direita do elevador" loading="lazy" />
   </section>
+
+
 
   <section class="text-center mt-[-60px] z-10 relative">
     <!-- Botões abaixo do elevador -->
@@ -724,49 +772,41 @@
     offset: 200,
   });
 </script>
+
+<!-- Porta animação -->
 <script>
   document.addEventListener("DOMContentLoaded", () => {
+    /* Mantém a animação só em telas > 400 px, como antes */
     if (window.innerWidth <= 400) return;
 
-    const porta = document.getElementById("elevador-img");
+    const esq = document.getElementById("porta-esquerda");
+    const dir = document.getElementById("porta-direita");
+    const logo = document.getElementById("logo-elevador");
     const botoes = document.getElementById("botoes-elevador");
 
-    const imagens = [
-      "/public/img/elevador/porta-fechada.png",
-      "/public/img/elevador/porta-meia-aberta.png",
-      "/public/img/elevador/porta-aberta-com-logo.png"
-    ];
+    /* Pequeno atraso para evitar flash durante o load */
+    setTimeout(() => {
 
-    let index = 0;
+      /* 1) Portas deslizam */
+      esq.classList.add("door-open-left");
+      dir.classList.add("door-open-right");
 
-    const animarPorta = () => {
-      if (index < imagens.length) {
-        porta.style.opacity = "0";
-        porta.style.transform = "scale(0.98)";
+      /* 2) Logo aparece (quase junto) */
+      logo.classList.remove("opacity-0");
+      logo.classList.add("opacity-100");
 
-        setTimeout(() => {
-          porta.src = imagens[index];
-          porta.style.opacity = "1";
-          porta.style.transform = "scale(1)";
-          index++;
+      /* 3) Quando o deslizamento termina, some as portas e mostra os botões */
+      setTimeout(() => {
+        esq.classList.add("door-fade");
+        dir.classList.add("door-fade");
 
-          if (index === imagens.length) {
-            setTimeout(() => {
-              botoes.classList.remove("hidden");
-              setTimeout(() => {
-                botoes.classList.add("opacity-100");
-              }, 100);
-            }, 800);
-          } else {
-            setTimeout(animarPorta, 700);
-          }
-        }, 300);
-      }
-    };
-
-    setTimeout(animarPorta, 300);
+        botoes.classList.remove("hidden");
+        /* leve fade-in */
+        setTimeout(() => botoes.classList.add("opacity-100"), 50);
+      }, 850);                   // ligeiramente > 0.8 s (tempo do transition)
+    }, 300);                     // mesmo delay que você já usava
   });
-
 </script>
+
 
 </html>
