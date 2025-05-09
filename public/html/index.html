@@ -167,7 +167,7 @@
             d="M21 10a9 9 0 11-18 0 9 9 0 0118 0z" />
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12h.01M12 12h.01M9 12h.01" />
         </svg>
-        Falar com a Gente
+        Fale conosco
       </a>
     </div>
 
@@ -762,9 +762,9 @@
       &copy; 2025 MULTIPARTS - Todos os direitos reservados.
     </div>
   </footer>
-  <!-- Indicador de scroll (canto inferior esquerdo) -->
-  <!-- Indicador de scroll (canto mediano direito) -->
-  <a href="#sobre" id="scroll-indicator" class="fixed right-6 top-1/2 transform -translate-y-1/2
+
+  <!-- Indicador de scroll-->
+  <a href="#sobre" id="scroll-indicator" class="hidden opacity-0 fixed right-6 top-1/2 transform -translate-y-1/2
           z-50 flex items-center justify-center
           w-14 h-14 md:w-16 md:h-16
           rounded-full bg-orange-500 text-white shadow-lg
@@ -774,6 +774,7 @@
       <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
     </svg>
   </a>
+
 
 
 
@@ -799,6 +800,8 @@
     const dir = document.getElementById("porta-direita");
     const logo = document.getElementById("logo-elevador");
     const botoes = document.getElementById("botoes-elevador");
+    const scroll = document.getElementById("scroll-indicator");
+
 
     /* Pequeno atraso para evitar flash durante o load */
     setTimeout(() => {
@@ -817,8 +820,14 @@
         dir.classList.add("door-fade");
 
         botoes.classList.remove("hidden");
-        /* leve fade-in */
-        setTimeout(() => botoes.classList.add("opacity-100"), 50);
+        scroll.classList.remove("hidden");
+
+        // leve fade-in
+        setTimeout(() => {
+          botoes.classList.add("opacity-100");
+          scroll.classList.add("opacity-100");
+        }, 50);
+
       }, 850);                   // ligeiramente > 0.8 s (tempo do transition)
     }, 300);                     // mesmo delay que você já usava
   });
