@@ -76,7 +76,7 @@
     overscroll-behavior: none;
     scroll-behavior: smooth;
     overscroll-behavior-y: contain;
-  background-color: #ffffff;
+  background-color: #fafafa;
   }
 </style>
 </head>
@@ -84,62 +84,54 @@
 <body class="bg-white text-black font-sans">
 
   <!-- Cabeçalho -->
-  <header
-    class="flex items-center justify-between px-4 py-2 border-b-2 border-orange-500 sticky top-0 bg-white z-50 h-[70px] md:h-[80px]"
-    role="banner">
-
-    <!-- Container logo + botão hamburguer (mobile) -->
-    <div class="flex items-center justify-between w-full md:w-auto">
-      <!-- Logo -->
-      <img src="/public/img/multipartes_logo_transparente.png" alt="Logo MULTIPARTS"
-        class="h-12 sm:h-16 md:h-20 lg:h-24 w-auto object-contain" loading="lazy">
-
-      <!-- Botão Hambúrguer (visível só no mobile) -->
-      <button id="btnMenu" class="md:hidden p-2 ml-auto" onclick="toggleMenu()">
-        <svg class="w-6 h-6 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
+  <header class="flex items-center justify-between px-4 py-2 border-b-2 border-orange-500 sticky top-0 bg-white z-50 h-[70px] md:h-[80px]" role="banner">
+  
+    <!-- Logo fixada à esquerda -->
+    <div class="flex items-center">
+      <img src="/public/img/multipartes_logo_transparente.png"
+      class="h-[64px] sm:h-16 md:h-24 lg:h-28 w-auto object-contain"
+      alt="Logo MULTIPARTS" loading="lazy">
     </div>
-
-    <!-- Menu de navegação para desktop -->
-    <nav class="hidden md:flex items-center gap-6">
+  
+    <!-- Menu à direita no desktop -->
+    <nav class="hidden md:flex items-center gap-6 flex-grow justify-end">
       <a href="#home" class="hover:text-orange-500 font-semibold">Início</a>
       <a href="#sobre" class="hover:text-orange-500 font-semibold">Sobre</a>
       <a href="#catalogo" class="hover:text-orange-500 font-semibold">Catálogo</a>
       <a href="#contato" class="hover:text-orange-500 font-semibold">Contato</a>
-
+  
       <div class="flex items-center gap-2">
-        <!-- WhatsApp -->
         <a href="https://wa.me/555197664066" target="_blank"
-          class="flex items-center gap-1 border border-orange-500 text-black bg-white py-1.5 px-3 rounded-full hover:bg-orange-100 transition text-sm font-semibold shadow-sm">
+           class="flex items-center gap-1 border border-orange-500 text-black bg-white py-1.5 px-3 rounded-full hover:bg-orange-100 transition text-sm font-semibold shadow-sm">
           <img src="/public/img/icons/whatsapp.png" alt="WhatsApp" class="w-4 h-4" />
           WhatsApp
         </a>
-
-        <!-- Instagram -->
         <a href="https://www.instagram.com/multipartspecas" target="_blank"
-          class="flex items-center gap-1 border border-orange-500 text-black bg-white py-1.5 px-3 rounded-full hover:bg-orange-100 transition text-sm font-semibold shadow-sm">
+           class="flex items-center gap-1 border border-orange-500 text-black bg-white py-1.5 px-3 rounded-full hover:bg-orange-100 transition text-sm font-semibold shadow-sm">
           <img src="/public/img/icons/instagram.png" alt="Instagram" class="w-4 h-4" />
           Instagram
         </a>
-
-        <!-- Facebook -->
         <a href="https://www.facebook.com/share/15qZtV9Wjq/" target="_blank"
-          class="flex items-center gap-1 border border-orange-500 text-black bg-white py-1.5 px-3 rounded-full hover:bg-orange-100 transition text-sm font-semibold shadow-sm">
+           class="flex items-center gap-1 border border-orange-500 text-black bg-white py-1.5 px-3 rounded-full hover:bg-orange-100 transition text-sm font-semibold shadow-sm">
           <img src="/public/img/icons/facebook.png" alt="Facebook" class="w-4 h-4" />
           Facebook
         </a>
-
-        <!-- Mercado Livre -->
         <a href="https://lista.mercadolivre.com.br/_CustId_114944990" target="_blank"
-          class="flex items-center gap-1 border border-orange-500 text-black bg-white py-1.5 px-3 rounded-full hover:bg-orange-100 transition text-sm font-semibold shadow-sm">
+           class="flex items-center gap-1 border border-orange-500 text-black bg-white py-1.5 px-3 rounded-full hover:bg-orange-100 transition text-sm font-semibold shadow-sm">
           <img src="/public/img/icons/mercadolivre.png" alt="Mercado Livre" class="w-4 h-4" />
           Mercado Livre
         </a>
       </div>
     </nav>
+  
+    <!-- Botão menu hambúrguer (mobile apenas) -->
+    <button id="btnMenu" class="md:hidden p-2 ml-auto" onclick="toggleMenu()">
+      <svg class="w-6 h-6 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
   </header>
+  
   <!-- Menu Lateral Mobile -->
   <div id="menuLateral"
     class="fixed top-0 right-0 w-64 h-full bg-white shadow-lg transform translate-x-full transition-transform duration-300 z-50 md:hidden">
@@ -179,7 +171,7 @@
 
   <!-- Logo para MOBILE -->
   <img id="logo-elevador-mobile" src="/public/img/logo_celular.png"
-    class="block sm:hidden absolute inset-0 top-[10px] translate-y-[-10%] m-auto w-[500px] opacity-0 transition-opacity duration-700 ease-in-out"
+    class="block sm:hidden absolute inset-0 top-[10px] translate-y-[-35%] m-auto w-[500] opacity-0 transition-opacity duration-700 ease-in-out"
     alt="Logo MULTIPARTS Mobile" loading="lazy" />
 
   <!-- Porta esquerda -->
@@ -192,7 +184,7 @@
 
   <!-- Botões e seta -->
   <div id="botoes-elevador"
-    class="hidden opacity-0 transition-opacity duration-700 flex flex-col gap-5 justify-center items-center mt-[600px] mb-12 z-10 ">
+    class="hidden opacity-0 transition-opacity duration-700 flex flex-col gap-5 justify-center items-center mt-[600px] mb-[200px] z-10 ">
 
     <!-- Botão Catálogo -->
     <a href="#catalogo"
