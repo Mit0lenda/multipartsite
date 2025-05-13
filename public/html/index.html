@@ -68,155 +68,184 @@
       pointer-events: none;
     }
   </style>
-<style>
-  html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overscroll-behavior: none;
-    scroll-behavior: smooth;
-    overscroll-behavior-y: contain;
-  background-color: #fafafa;
-  }
-</style>
+  <style>
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overscroll-behavior: none;
+      scroll-behavior: smooth;
+      overscroll-behavior-y: contain;
+      background-color: #fafafa;
+    }
+  </style>
 </head>
 
 <body class="bg-white text-black font-sans">
 
   <!-- Cabeçalho -->
-  <header class="flex items-center justify-between px-4 py-2 border-b-2 border-orange-500 sticky top-0 bg-white z-50 h-[70px] md:h-[80px]" role="banner">
-  
+  <header
+    class="flex items-center justify-between px-4 py-2 border-b-2 border-orange-500 sticky top-0 bg-white z-50 h-[70px] md:h-[80px]"
+    role="banner">
+
     <!-- Logo fixada à esquerda -->
-    <div class="flex items-center">
+    <div class="flex items-center flex-shrink-0 mr-4">
       <img src="/public/img/multipartes_logo_transparente.png"
-      class="h-[64px] sm:h-16 md:h-24 lg:h-28 w-auto object-contain"
-      alt="Logo MULTIPARTS" loading="lazy">
+        class="h-[64px] sm:h-16 md:h-[75px] lg:h-16 w-auto object-contain" alt="Logo MULTIPARTS" loading="lazy">
     </div>
-  
+
     <!-- Menu à direita no desktop -->
-    <nav class="hidden md:flex items-center gap-6 flex-grow justify-end">
+    <nav class="hidden md:flex items-center gap-6 flex-grow justify-end" role="navigation">
       <a href="#home" class="hover:text-orange-500 font-semibold">Início</a>
       <a href="#sobre" class="hover:text-orange-500 font-semibold">Sobre</a>
       <a href="#catalogo" class="hover:text-orange-500 font-semibold">Catálogo</a>
       <a href="#contato" class="hover:text-orange-500 font-semibold">Contato</a>
-  
+
       <div class="flex items-center gap-2">
-        <a href="https://wa.me/555197664066" target="_blank"
-           class="flex items-center gap-1 border border-orange-500 text-black bg-white py-1.5 px-3 rounded-full hover:bg-orange-100 transition text-sm font-semibold shadow-sm">
+        <a href="https://wa.me/555197664066" target="_blank" rel="noopener noreferrer"
+          class="flex items-center gap-1 border border-orange-500 text-black bg-white py-1.5 px-3 rounded-full hover:bg-orange-100 transition text-sm font-semibold shadow-sm">
           <img src="/public/img/icons/whatsapp.png" alt="WhatsApp" class="w-4 h-4" />
           WhatsApp
         </a>
-        <a href="https://www.instagram.com/multipartspecas" target="_blank"
-           class="flex items-center gap-1 border border-orange-500 text-black bg-white py-1.5 px-3 rounded-full hover:bg-orange-100 transition text-sm font-semibold shadow-sm">
+        <a href="https://www.instagram.com/multipartspecas" target="_blank" rel="noopener noreferrer"
+          class="flex items-center gap-1 border border-orange-500 text-black bg-white py-1.5 px-3 rounded-full hover:bg-orange-100 transition text-sm font-semibold shadow-sm">
           <img src="/public/img/icons/instagram.png" alt="Instagram" class="w-4 h-4" />
           Instagram
         </a>
-        <a href="https://www.facebook.com/share/15qZtV9Wjq/" target="_blank"
-           class="flex items-center gap-1 border border-orange-500 text-black bg-white py-1.5 px-3 rounded-full hover:bg-orange-100 transition text-sm font-semibold shadow-sm">
+        <a href="https://www.facebook.com/share/15qZtV9Wjq/" target="_blank" rel="noopener noreferrer"
+          class="flex items-center gap-1 border border-orange-500 text-black bg-white py-1.5 px-3 rounded-full hover:bg-orange-100 transition text-sm font-semibold shadow-sm">
           <img src="/public/img/icons/facebook.png" alt="Facebook" class="w-4 h-4" />
           Facebook
         </a>
-        <a href="https://lista.mercadolivre.com.br/_CustId_114944990" target="_blank"
-           class="flex items-center gap-1 border border-orange-500 text-black bg-white py-1.5 px-3 rounded-full hover:bg-orange-100 transition text-sm font-semibold shadow-sm">
+        <a href="https://lista.mercadolivre.com.br/_CustId_114944990" target="_blank" rel="noopener noreferrer"
+          class="flex items-center gap-1 border border-orange-500 text-black bg-white py-1.5 px-3 rounded-full hover:bg-orange-100 transition text-sm font-semibold shadow-sm">
           <img src="/public/img/icons/mercadolivre.png" alt="Mercado Livre" class="w-4 h-4" />
           Mercado Livre
         </a>
       </div>
     </nav>
-  
+
     <!-- Botão menu hambúrguer (mobile apenas) -->
-    <button id="btnMenu" class="md:hidden p-2 ml-auto" onclick="toggleMenu()">
+    <button id="btnMenu" class="md:hidden p-2 ml-auto"
+    aria-expanded="false" aria-controls="menuLateral"
+    onclick="toggleMenu()">
       <svg class="w-6 h-6 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
       </svg>
     </button>
   </header>
-  
+
   <!-- Menu Lateral Mobile -->
   <div id="menuLateral"
-    class="fixed top-0 right-0 w-64 h-full bg-white shadow-lg transform translate-x-full transition-transform duration-300 z-50 md:hidden">
+    class="fixed top-0 right-0 w-[13.5rem] h-full bg-white shadow-lg transform translate-x-full transition-transform duration-300 z-50 md:hidden">
     <div class="p-4 flex justify-between items-center border-b">
       <span class="font-bold text-orange-500 text-lg">Menu</span>
       <button onclick="toggleMenu()" class="text-gray-700 text-2xl">&times;</button>
     </div>
-    <nav class="p-4 flex flex-col gap-4">
+    <nav class="p-4 flex flex-col gap-4" role="navigation">
       <a href="#home" onclick="toggleMenu()" class="text-gray-700 font-semibold hover:text-orange-500">Início</a>
       <a href="#sobre" onclick="toggleMenu()" class="text-gray-700 font-semibold hover:text-orange-500">Sobre</a>
       <a href="#catalogo" onclick="toggleMenu()" class="text-gray-700 font-semibold hover:text-orange-500">Catálogo</a>
       <a href="#contato" onclick="toggleMenu()" class="text-gray-700 font-semibold hover:text-orange-500">Contato</a>
-      <hr />
-      <a href="https://wa.me/555197664066" class="text-green-600">WhatsApp</a>
-      <a href="https://www.instagram.com/multipartspecas" class="text-pink-500">Instagram</a>
-      <a href="https://www.facebook.com/share/15qZtV9Wjq/" class="text-blue-600">Facebook</a>
-      <a href="https://lista.mercadolivre.com.br/_CustId_114944990" class="text-yellow-600">Mercado Livre</a>
+    
+      <hr class="my-4" />
+    
+      <!-- Redes Sociais com ícones e estilo desktop -->
+      <a href="https://wa.me/555197664066" target="_blank" rel="noopener noreferrer"
+        class="flex items-center gap-2 border border-orange-500 text-black bg-white py-1.5 px-4 rounded-full hover:bg-orange-100 transition text-sm font-semibold shadow-sm">
+        <img src="/public/img/icons/whatsapp.png" alt="WhatsApp" class="w-4 h-4" />
+        WhatsApp
+      </a>
+    
+      <a href="https://www.instagram.com/multipartspecas" target="_blank" rel="noopener noreferrer"
+        class="flex items-center gap-2 border border-orange-500 text-black bg-white py-1.5 px-4 rounded-full hover:bg-orange-100 transition text-sm font-semibold shadow-sm">
+        <img src="/public/img/icons/instagram.png" alt="Instagram" class="w-4 h-4" />
+        Instagram
+      </a>
+    
+      <a href="https://www.facebook.com/share/15qZtV9Wjq/" target="_blank" rel="noopener noreferrer"
+        class="flex items-center gap-2 border border-orange-500 text-black bg-white py-1.5 px-4 rounded-full hover:bg-orange-100 transition text-sm font-semibold shadow-sm">
+        <img src="/public/img/icons/facebook.png" alt="Facebook" class="w-4 h-4" />
+        Facebook
+      </a>
+    
+      <a href="https://lista.mercadolivre.com.br/_CustId_114944990" target="_blank" rel="noopener noreferrer"
+        class="flex items-center gap-2 border border-orange-500 text-black bg-white py-1.5 px-4 rounded-full hover:bg-orange-100 transition text-sm font-semibold shadow-sm">
+        <img src="/public/img/icons/mercadolivre.png" alt="Mercado Livre" class="w-4 h-4" />
+        Mercado Livre
+      </a>
     </nav>
+    
   </div>
 
 
-<!-- Home -->
-<section id="home"
-  class="relative w-full min-h-screen max-h-screen overflow-hidden flex flex-col justify-center items-center px-4 text-center">
+  <!-- Home -->
+  <section id="home"
+    class="relative w-full min-h-screen max-h-screen overflow-hidden flex flex-col justify-center items-center px-4 text-center">
 
 
-  <!-- Imagem de fundo -->
-  <div class="absolute inset-0 z-0">
-    <div class="absolute inset-0 bg-[url('/public/img/elevador/elevador.png')] bg-cover bg-center"></div>
-    <div class="absolute inset-0 bg-white/40"></div>
-  </div>
+    <!-- Imagem de fundo -->
+    <div class="absolute inset-0 z-0">
+      <div class="absolute inset-0 bg-[url('/public/img/elevador/elevador.png')] bg-cover bg-center"></div>
+      <div class="absolute inset-0 bg-white/40"></div>
+    </div>
 
-  <!-- Logo para DESKTOP -->
-  <img id="logo-elevador" src="/public/img/multipartes_logo_transparente.png"
-    class="hidden sm:block absolute inset-0 top-10 sm:top-[-10%] m-auto w-56 sm:w-80 md:w-96 lg:w-[500px] opacity-0 transition-opacity duration-700 ease-in-out"
-    alt="Logo MULTIPARTS" loading="lazy" />
+    <!-- Logo para DESKTOP -->
+    <img id="logo-elevador" src="/public/img/multipartes_logo_transparente.png"
+  class="hidden sm:block absolute top-[10%] m-auto w-56 sm:w-80 md:w-96 lg:w-[500px] opacity-0 transition-opacity duration-700 ease-in-out"
+  alt="Logo MULTIPARTS" loading="lazy" />
 
-  <!-- Logo para MOBILE -->
-  <img id="logo-elevador-mobile" src="/public/img/logo_celular.png"
-    class="block sm:hidden absolute inset-0 top-[10px] translate-y-[-35%] m-auto w-[500] opacity-0 transition-opacity duration-700 ease-in-out"
-    alt="Logo MULTIPARTS Mobile" loading="lazy" />
 
-  <!-- Porta esquerda -->
-  <img id="porta-esquerda" src="/public/img/elevador/direita.png" class="door door-left z-10"
-    alt="Porta esquerda do elevador" loading="lazy" />
 
-  <!-- Porta direita -->
-  <img id="porta-direita" src="/public/img/elevador/esquerda.png" class="door door-right z-10"
-    alt="Porta direita do elevador" loading="lazy" />
+    <!-- Logo para MOBILE -->
+    <img id="logo-elevador-mobile" src="/public/img/logo_celular.png"
+      class="block sm:hidden absolute inset-0 top-[10px] translate-y-[-35%] m-auto w-[500] opacity-0 transition-opacity duration-700 ease-in-out"
+      alt="Logo MULTIPARTS Mobile" loading="lazy" />
 
-  <!-- Botões e seta -->
-  <div id="botoes-elevador"
-    class="hidden opacity-0 transition-opacity duration-700 flex flex-col gap-5 justify-center items-center mt-[600px] mb-[200px] z-10 ">
+    <!-- Porta esquerda -->
+    <img id="porta-esquerda" src="/public/img/elevador/direita.png" class="door door-left z-10"
+      alt="Porta esquerda do elevador" loading="lazy" />
 
-    <!-- Botão Catálogo -->
-    <a href="#catalogo"
-      class="flex items-center gap-2 bg-orange-500 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:bg-orange-600 transition">
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-      </svg>
-      Ver Catálogo
-    </a>
+    <!-- Porta direita -->
+    <img id="porta-direita" src="/public/img/elevador/esquerda.png" class="door door-right z-10"
+      alt="Porta direita do elevador" loading="lazy" />
 
-    <!-- Botão Contato -->
-    <a href="#contato"
-      class="flex items-center gap-2 bg-neutral-800 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:bg-neutral-700 transition">
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-          d="M21 10a9 9 0 11-18 0 9 9 0 0118 0z" />
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12h.01M12 12h.01M9 12h.01" />
-      </svg>
-      Fale conosco
-    </a>
+    <!-- Botões e seta -->
+    <div id="botoes-elevador"
+      class="hidden opacity-0 transition-opacity duration-700 flex flex-col gap-5 justify-center items-center mt-[600px] mb-[200px] z-10 ">
 
-    <!-- Seta de scroll -->
-    <a href="#sobre" id="scroll-indicator"
-      class="hidden opacity-0 flex items-center justify-center mt-4 w-14 h-14 md:w-16 md:h-16 rounded-full bg-orange-500 text-white shadow-lg hover:bg-orange-600 transition">
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 md:w-7 md:h-7" fill="none" viewBox="0 0 24 24"
-        stroke="currentColor" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-      </svg>
-    </a>
+      <!-- Botão Catálogo -->
+      <a href="#catalogo"
+        class="flex items-center gap-2 bg-orange-500 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:bg-orange-600 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+        Ver Catálogo
+      </a>
 
-  </div>
-</section>
+      <!-- Botão Contato -->
+      <a href="#contato"
+        class="flex items-center gap-2 bg-neutral-800 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:bg-neutral-700 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M21 10a9 9 0 11-18 0 9 9 0 0118 0z" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12h.01M12 12h.01M9 12h.01" />
+        </svg>
+        Fale conosco
+      </a>
+
+      <!-- Seta de scroll -->
+      <a href="#sobre" id="scroll-indicator"
+        class="hidden opacity-0 flex items-center justify-center mt-4 w-14 h-14 md:w-16 md:h-16 rounded-full bg-orange-500 text-white shadow-lg hover:bg-orange-600 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 md:w-7 md:h-7" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </a>
+
+    </div>
+  </section>
 
   <!-- Agora o novo Sobre -->
   <section id="sobre" class="relative py-20 px-6 overflow-hidden bg-gray-100">
@@ -305,17 +334,14 @@
   <section id="catalogo" class="py-16 px-6 bg-gray-50">
     <h2 class="text-3xl font-bold text-center mb-12">Escolha a Marca do Elevador</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto auto-rows-[180px]">
-<!-- Unidigital – agora ocupa a linha inteira -->
-<div
-  onclick="openModal('modalUnidigital')"
-  class="cursor-pointer bg-[#f2f0f7] p-6 rounded-xl shadow-md text-center
+      <!-- Unidigital – agora ocupa a linha inteira -->
+      <div onclick="openModal('modalUnidigital')" class="cursor-pointer bg-[#f2f0f7] p-6 rounded-xl shadow-md text-center
          hover:ring-4 hover:ring-orange-500 hover:ring-opacity-20
          transition transform hover:scale-105 h-full flex items-center justify-center
          sm:col-span-2 md:col-span-3 lg:col-span-3">
-  <img src="/public/img/marcas/unidigital.png" alt="Logo Unidigital"
-       class="max-h-20 max-w-50 w-full h-auto mx-auto object-contain
+        <img src="/public/img/marcas/unidigital.png" alt="Logo Unidigital" class="max-h-20 max-w-50 w-full h-auto mx-auto object-contain
               transition-transform duration-300 hover:scale-105">
-</div>
+      </div>
 
 
       <!-- Wittur -->
@@ -390,7 +416,7 @@
         </div>
 
         <!-- Botão -->
-        <a href="https://lista.mercadolivre.com.br/_CustId_114944990#D[A:wittur]" target="_blank"
+        <a href="https://lista.mercadolivre.com.br/_CustId_114944990#D[A:wittur]" target="_blank" rel="noopener noreferrer"
           class="block text-center bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-5 rounded-lg transition">
           Compre com a gente
         </a>
@@ -431,7 +457,7 @@
         </div>
 
         <!-- Botão -->
-        <a href="https://lista.mercadolivre.com.br/_CustId_114944990#D[A:atlas%20schindler]" target="_blank"
+        <a href="https://lista.mercadolivre.com.br/_CustId_114944990#D[A:atlas%20schindler]" target="_blank" rel="noopener noreferrer"
           class="block text-center bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-5 rounded-lg transition">
           Compre com a gente
         </a>
@@ -472,7 +498,7 @@
         </div>
 
         <!-- Botão -->
-        <a href="https://lista.mercadolivre.com.br/_CustId_114944990#D[A:TKE]" target="_blank"
+        <a href="https://lista.mercadolivre.com.br/_CustId_114944990#D[A:TKE]" target="_blank" rel="noopener noreferrer"
           class="block text-center bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-5 rounded-lg transition">
           Compre com a gente
         </a>
@@ -513,7 +539,7 @@
         </div>
 
         <!-- Botão -->
-        <a href="https://lista.mercadolivre.com.br/_CustId_114944990#D[A:otis]" target="_blank"
+        <a href="https://lista.mercadolivre.com.br/_CustId_114944990#D[A:otis]" target="_blank" rel="noopener noreferrer"
           class="block text-center bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-5 rounded-lg transition">
           Compre com a gente
         </a>
@@ -554,7 +580,7 @@
         </div>
 
         <!-- Botão -->
-        <a href="https://lista.mercadolivre.com.br/_CustId_114944990#D[A:fermator]" target="_blank"
+        <a href="https://lista.mercadolivre.com.br/_CustId_114944990#D[A:fermator]" target="_blank" rel="noopener noreferrer"
           class="block text-center bg-cyan-700 hover:bg-cyan-800 text-white font-bold py-3 px-5 rounded-lg transition">
           Compre com a gente
         </a>
@@ -595,7 +621,7 @@
         </div>
 
         <!-- Botão -->
-        <a href="https://lista.mercadolivre.com.br/_CustId_114944990#D[A:unidigital]" target="_blank"
+        <a href="https://lista.mercadolivre.com.br/_CustId_114944990#D[A:unidigital]" target="_blank" rel="noopener noreferrer"
           class="block text-center bg-purple-700 hover:bg-purple-800 text-white font-bold py-3 px-5 rounded-lg transition">
           Compre com a gente
         </a>
@@ -636,7 +662,7 @@
         </div>
 
         <!-- Botão -->
-        <a href="https://lista.mercadolivre.com.br/_CustId_114944990" target="_blank"
+        <a href="https://lista.mercadolivre.com.br/_CustId_114944990" target="_blank" rel="noopener noreferrer"
           class="block text-center bg-gray-800 hover:bg-gray-900 text-white font-bold py-3 px-5 rounded-lg transition">
           Compre com a gente
         </a>
@@ -780,23 +806,23 @@
     <!-- Redes Sociais -->
     <div class="flex justify-center items-center gap-6 mt-6">
 
-      <a href="https://wa.me/555197664066" target="_blank" aria-label="WhatsApp"
+      <a href="https://wa.me/555197664066" target="_blank" aria-label="WhatsApp" rel="noopener noreferrer"
         class="transform transition duration-300 hover:scale-110 hover:drop-shadow-[0_0_5px_#f97316]">
         <img src="/public/img/icons/whatsapp.png" alt="WhatsApp" class="h-8 w-8">
       </a>
 
-      <a href="https://www.instagram.com/multipartspecas?igsh=MTNkcnNpMGc5bXBxbA==" target="_blank"
+      <a href="https://www.instagram.com/multipartspecas?igsh=MTNkcnNpMGc5bXBxbA==" target="_blank" rel="noopener noreferrer"
         aria-label="Instagram"
         class="transform transition duration-300 hover:scale-110 hover:drop-shadow-[0_0_5px_#f97316]">
         <img src="/public/img/icons/instagram.png" alt="Instagram" class="h-8 w-8">
       </a>
 
-      <a href="https://www.facebook.com/share/15qZtV9Wjq/" target="_blank" aria-label="Facebook"
+      <a href="https://www.facebook.com/share/15qZtV9Wjq/" target="_blank" aria-label="Facebook" rel="noopener noreferrer"
         class="transform transition duration-300 hover:scale-110 hover:drop-shadow-[0_0_5px_#f97316]">
         <img src="/public/img/icons/facebook.png" alt="Facebook" class="h-8 w-8">
       </a>
 
-      <a href="https://lista.mercadolivre.com.br/_CustId_114944990" target="_blank" aria-label="Mercado Livre"
+      <a href="https://lista.mercadolivre.com.br/_CustId_114944990" target="_blank" aria-label="Mercado Livre" rel="noopener noreferrer"
         class="transform transition duration-300 hover:scale-110 hover:drop-shadow-[0_0_5px_#f97316]">
         <img src="/public/img/icons/mercadolivre.png" alt="Mercado Livre" class="h-8 w-8">
       </a>
