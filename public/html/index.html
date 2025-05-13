@@ -36,6 +36,7 @@
       /* sobrepõe no mesmo container */
       top: 0;
       height: 100%;
+      max-width: 100vw;
       width: 50%;
       object-fit: cover;
       transition: transform .4s ease-in-out, opacity .4s ease-out;
@@ -67,116 +68,163 @@
       pointer-events: none;
     }
   </style>
-
+<style>
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overscroll-behavior: none;
+    scroll-behavior: smooth;
+    overscroll-behavior-y: contain;
+  background-color: #ffffff;
+  }
+</style>
 </head>
 
 <body class="bg-white text-black font-sans">
 
   <!-- Cabeçalho -->
   <header
-    class="flex justify-between items-center px-4 py-2 md:py-2 border-b-2 border-orange-500 sticky top-0 bg-white z-50 h-[70px] md:h-[80px]"
+    class="flex items-center justify-between px-4 py-2 border-b-2 border-orange-500 sticky top-0 bg-white z-50 h-[70px] md:h-[80px]"
     role="banner">
-    <img src="/public/img/multipartes_logo_transparente.png" alt="Logo MULTIPARTS"
-      class="h-12 sm:h-16 md:h-20 lg:h-24 w-auto object-contain" loading="lazy">
 
+    <!-- Container logo + botão hamburguer (mobile) -->
+    <div class="flex items-center justify-between w-full md:w-auto">
+      <!-- Logo -->
+      <img src="/public/img/multipartes_logo_transparente.png" alt="Logo MULTIPARTS"
+        class="h-12 sm:h-16 md:h-20 lg:h-24 w-auto object-contain" loading="lazy">
 
-    <nav>
-      <ul class="flex gap-6">
-        <li><a href="#home" class="hover:text-orange-500 font-semibold">Início</a></li>
-        <li>
-        <li><a href="#sobre" class="hover:text-orange-500 font-semibold">Sobre</a></li>
+      <!-- Botão Hambúrguer (visível só no mobile) -->
+      <button id="btnMenu" class="md:hidden p-2 ml-auto" onclick="toggleMenu()">
+        <svg class="w-6 h-6 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
 
-        <div class="flex items-center gap-2">
-          <!-- WhatsApp -->
-          <a href="https://wa.me/555197664066" target="_blank"
-            class="flex items-center gap-1 border border-orange-500 text-black bg-white py-1.5 px-3 rounded-full hover:bg-orange-100 transition text-sm font-semibold shadow-sm">
-            <img src="/public/img/icons/whatsapp.png" alt="WhatsApp" class="w-4 h-4" />
-            WhatsApp
-          </a>
+    <!-- Menu de navegação para desktop -->
+    <nav class="hidden md:flex items-center gap-6">
+      <a href="#home" class="hover:text-orange-500 font-semibold">Início</a>
+      <a href="#sobre" class="hover:text-orange-500 font-semibold">Sobre</a>
+      <a href="#catalogo" class="hover:text-orange-500 font-semibold">Catálogo</a>
+      <a href="#contato" class="hover:text-orange-500 font-semibold">Contato</a>
 
-          <!-- Instagram -->
-          <a href="https://www.instagram.com/multipartspecas" target="_blank"
-            class="flex items-center gap-1 border border-orange-500 text-black bg-white py-1.5 px-3 rounded-full hover:bg-orange-100 transition text-sm font-semibold shadow-sm">
-            <img src="/public/img/icons/instagram.png" alt="Instagram" class="w-4 h-4" />
-            Instagram
-          </a>
+      <div class="flex items-center gap-2">
+        <!-- WhatsApp -->
+        <a href="https://wa.me/555197664066" target="_blank"
+          class="flex items-center gap-1 border border-orange-500 text-black bg-white py-1.5 px-3 rounded-full hover:bg-orange-100 transition text-sm font-semibold shadow-sm">
+          <img src="/public/img/icons/whatsapp.png" alt="WhatsApp" class="w-4 h-4" />
+          WhatsApp
+        </a>
 
-          <!-- Facebook -->
-          <a href="https://www.facebook.com/share/15qZtV9Wjq/" target="_blank"
-            class="flex items-center gap-1 border border-orange-500 text-black bg-white py-1.5 px-3 rounded-full hover:bg-orange-100 transition text-sm font-semibold shadow-sm">
-            <img src="/public/img/icons/facebook.png" alt="Facebook" class="w-4 h-4" />
-            Facebook
-          </a>
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/multipartspecas" target="_blank"
+          class="flex items-center gap-1 border border-orange-500 text-black bg-white py-1.5 px-3 rounded-full hover:bg-orange-100 transition text-sm font-semibold shadow-sm">
+          <img src="/public/img/icons/instagram.png" alt="Instagram" class="w-4 h-4" />
+          Instagram
+        </a>
 
-          <!-- Mercado Livre -->
-          <a href="https://lista.mercadolivre.com.br/_CustId_114944990" target="_blank"
-            class="flex items-center gap-1 border border-orange-500 text-black bg-white py-1.5 px-3 rounded-full hover:bg-orange-100 transition text-sm font-semibold shadow-sm">
-            <img src="/public/img/icons/mercadolivre.png" alt="Mercado Livre" class="w-4 h-4" />
-            Mercado Livre
-          </a>
-        </div>
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/share/15qZtV9Wjq/" target="_blank"
+          class="flex items-center gap-1 border border-orange-500 text-black bg-white py-1.5 px-3 rounded-full hover:bg-orange-100 transition text-sm font-semibold shadow-sm">
+          <img src="/public/img/icons/facebook.png" alt="Facebook" class="w-4 h-4" />
+          Facebook
+        </a>
 
-
-
-        </li>
-      </ul>
+        <!-- Mercado Livre -->
+        <a href="https://lista.mercadolivre.com.br/_CustId_114944990" target="_blank"
+          class="flex items-center gap-1 border border-orange-500 text-black bg-white py-1.5 px-3 rounded-full hover:bg-orange-100 transition text-sm font-semibold shadow-sm">
+          <img src="/public/img/icons/mercadolivre.png" alt="Mercado Livre" class="w-4 h-4" />
+          Mercado Livre
+        </a>
+      </div>
     </nav>
   </header>
-
-  <!-- Home -->
-  <section id="home" class="relative min-h-[300px] sm:min-h-[400px] md:min-h-[500px] lg:min-h-[800px] overflow-hidden">
-    <!-- Talvez mudar de volta pra 600?-->
-
-    <!-- Imagem de fundo -->
-    <div class="absolute inset-0 z-0">
-      <div class="absolute inset-0 bg-[url('/public/img/elevador/elevador.png')] bg-cover bg-center"></div>
-      <div class="absolute inset-0 bg-white/40"></div> <!-- <- Overlay branco a 70% -->
+  <!-- Menu Lateral Mobile -->
+  <div id="menuLateral"
+    class="fixed top-0 right-0 w-64 h-full bg-white shadow-lg transform translate-x-full transition-transform duration-300 z-50 md:hidden">
+    <div class="p-4 flex justify-between items-center border-b">
+      <span class="font-bold text-orange-500 text-lg">Menu</span>
+      <button onclick="toggleMenu()" class="text-gray-700 text-2xl">&times;</button>
     </div>
-
-    <!-- Logo ao fundo (fica escondido até as portas abrirem) -->
-    <img id="logo-elevador" src="/public/img/multipartes_logo_transparente.png"
-      class="absolute inset-0 top-[-10%] m-auto w-64 sm:w-80 md:w-96 lg:w-[500px] opacity-0 transition-opacity duration-700 z-10"
-      alt="Logo MULTIPARTS" loading="lazy" />
-
-    <!-- Porta esquerda -->
-    <img id="porta-esquerda" src="/public/img/elevador/direita.png" class="door door-left z-10"
-      alt="Porta esquerda do elevador" loading="lazy" />
-
-    <!-- Porta direita -->
-    <img id="porta-direita" src="/public/img/elevador/esquerda.png" class="door door-right z-10"
-      alt="Porta direita do elevador" loading="lazy" />
-  </section>
+    <nav class="p-4 flex flex-col gap-4">
+      <a href="#home" onclick="toggleMenu()" class="text-gray-700 font-semibold hover:text-orange-500">Início</a>
+      <a href="#sobre" onclick="toggleMenu()" class="text-gray-700 font-semibold hover:text-orange-500">Sobre</a>
+      <a href="#catalogo" onclick="toggleMenu()" class="text-gray-700 font-semibold hover:text-orange-500">Catálogo</a>
+      <a href="#contato" onclick="toggleMenu()" class="text-gray-700 font-semibold hover:text-orange-500">Contato</a>
+      <hr />
+      <a href="https://wa.me/555197664066" class="text-green-600">WhatsApp</a>
+      <a href="https://www.instagram.com/multipartspecas" class="text-pink-500">Instagram</a>
+      <a href="https://www.facebook.com/share/15qZtV9Wjq/" class="text-blue-600">Facebook</a>
+      <a href="https://lista.mercadolivre.com.br/_CustId_114944990" class="text-yellow-600">Mercado Livre</a>
+    </nav>
+  </div>
 
 
-
-  <section class="text-center mt-[-60px] z-10 relative">
-    <!-- Botões abaixo do elevador -->
-    <div id="botoes-elevador"
-      class="hidden opacity-0 transition-opacity duration-700 flex flex-col sm:flex-row gap-4 justify-center items-center absolute bottom-6 left-1/2 transform -translate-x-1/2">
-      <a href="#catalogo"
-        class="flex items-center gap-2 bg-orange-500 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:bg-orange-600 transition">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-        </svg>
-        Ver Catálogo
-      </a>
-      <a href="#contato"
-        class="flex items-center gap-2 bg-neutral-800 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:bg-neutral-700 transition">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M21 10a9 9 0 11-18 0 9 9 0 0118 0z" />
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12h.01M12 12h.01M9 12h.01" />
-        </svg>
-        Fale conosco
-      </a>
-    </div>
+<!-- Home -->
+<section id="home"
+  class="relative w-full min-h-screen max-h-screen overflow-hidden flex flex-col justify-center items-center px-4 text-center">
 
 
-  </section>
+  <!-- Imagem de fundo -->
+  <div class="absolute inset-0 z-0">
+    <div class="absolute inset-0 bg-[url('/public/img/elevador/elevador.png')] bg-cover bg-center"></div>
+    <div class="absolute inset-0 bg-white/40"></div>
+  </div>
 
-  <!-- Transição visual entre o elevador e o "Sobre" -->
-  <div class="h-8 sm:h-12 w-full bg-gradient-to-b from-black to-gray-100"></div>
+  <!-- Logo para DESKTOP -->
+  <img id="logo-elevador" src="/public/img/multipartes_logo_transparente.png"
+    class="hidden sm:block absolute inset-0 top-10 sm:top-[-10%] m-auto w-56 sm:w-80 md:w-96 lg:w-[500px] opacity-0 transition-opacity duration-700 ease-in-out"
+    alt="Logo MULTIPARTS" loading="lazy" />
 
+  <!-- Logo para MOBILE -->
+  <img id="logo-elevador-mobile" src="/public/img/logo_celular.png"
+    class="block sm:hidden absolute inset-0 top-[10px] translate-y-[-10%] m-auto w-[500px] opacity-0 transition-opacity duration-700 ease-in-out"
+    alt="Logo MULTIPARTS Mobile" loading="lazy" />
+
+  <!-- Porta esquerda -->
+  <img id="porta-esquerda" src="/public/img/elevador/direita.png" class="door door-left z-10"
+    alt="Porta esquerda do elevador" loading="lazy" />
+
+  <!-- Porta direita -->
+  <img id="porta-direita" src="/public/img/elevador/esquerda.png" class="door door-right z-10"
+    alt="Porta direita do elevador" loading="lazy" />
+
+  <!-- Botões e seta -->
+  <div id="botoes-elevador"
+    class="hidden opacity-0 transition-opacity duration-700 flex flex-col gap-5 justify-center items-center mt-[600px] mb-12 z-10 ">
+
+    <!-- Botão Catálogo -->
+    <a href="#catalogo"
+      class="flex items-center gap-2 bg-orange-500 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:bg-orange-600 transition">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+      Ver Catálogo
+    </a>
+
+    <!-- Botão Contato -->
+    <a href="#contato"
+      class="flex items-center gap-2 bg-neutral-800 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:bg-neutral-700 transition">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M21 10a9 9 0 11-18 0 9 9 0 0118 0z" />
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12h.01M12 12h.01M9 12h.01" />
+      </svg>
+      Fale conosco
+    </a>
+
+    <!-- Seta de scroll -->
+    <a href="#sobre" id="scroll-indicator"
+      class="hidden opacity-0 flex items-center justify-center mt-4 w-14 h-14 md:w-16 md:h-16 rounded-full bg-orange-500 text-white shadow-lg hover:bg-orange-600 transition">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 md:w-7 md:h-7" fill="none" viewBox="0 0 24 24"
+        stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+      </svg>
+    </a>
+
+  </div>
+</section>
 
   <!-- Agora o novo Sobre -->
   <section id="sobre" class="relative py-20 px-6 overflow-hidden bg-gray-100">
@@ -265,6 +313,19 @@
   <section id="catalogo" class="py-16 px-6 bg-gray-50">
     <h2 class="text-3xl font-bold text-center mb-12">Escolha a Marca do Elevador</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto auto-rows-[180px]">
+<!-- Unidigital – agora ocupa a linha inteira -->
+<div
+  onclick="openModal('modalUnidigital')"
+  class="cursor-pointer bg-[#f2f0f7] p-6 rounded-xl shadow-md text-center
+         hover:ring-4 hover:ring-orange-500 hover:ring-opacity-20
+         transition transform hover:scale-105 h-full flex items-center justify-center
+         sm:col-span-2 md:col-span-3 lg:col-span-3">
+  <img src="/public/img/marcas/unidigital.png" alt="Logo Unidigital"
+       class="max-h-20 max-w-50 w-full h-auto mx-auto object-contain
+              transition-transform duration-300 hover:scale-105">
+</div>
+
+
       <!-- Wittur -->
       <div onclick="openModal('modalWittur')"
         class="cursor-pointer bg-[#e8f3f1] p-6 rounded-xl shadow-md text-center hover:ring-4 hover:ring-orange-500 hover:ring-opacity-20 transition transform hover:scale-105 h-full flex items-center justify-center">
@@ -293,12 +354,6 @@
       <div onclick="openModal('modalFermator')"
         class="cursor-pointer bg-[#e6f0f2] p-6 rounded-xl shadow-md text-center hover:ring-4 hover:ring-orange-500 hover:ring-opacity-20 transition transform hover:scale-105 h-full flex items-center justify-center">
         <img src="/public/img/marcas/fermator.png" alt="Logo Fermator"
-          class="max-h-28 max-w-40 w-full h-auto mx-auto object-contain transition-transform duration-300 hover:scale-105">
-      </div>
-      <!-- Unidigital -->
-      <div onclick="openModal('modalUnidigital')"
-        class="cursor-pointer bg-[#f2f0f7] p-6 rounded-xl shadow-md text-center hover:ring-4 hover:ring-orange-500 hover:ring-opacity-20 transition transform hover:scale-105 h-full flex items-center justify-center">
-        <img src="/public/img/marcas/unidigital.png" alt="Logo Unidigital"
           class="max-h-28 max-w-40 w-full h-auto mx-auto object-contain transition-transform duration-300 hover:scale-105">
       </div>
       <!-- Diversas -->
@@ -765,15 +820,16 @@
 
   <!-- Indicador de scroll-->
   <a href="#sobre" id="scroll-indicator" class="hidden opacity-0 fixed right-6 top-1/2 transform -translate-y-1/2
-          z-50 flex items-center justify-center
-          w-14 h-14 md:w-16 md:h-16
-          rounded-full bg-orange-500 text-white shadow-lg
-          hover:bg-orange-600 transition">
+        z-50 flex items-center justify-center
+        w-14 h-14 md:w-16 md:h-16
+        rounded-full bg-orange-500 text-white shadow-lg
+        hover:bg-orange-600 transition">
     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 md:w-7 md:h-7" fill="none" viewBox="0 0 24 24"
       stroke="currentColor" stroke-width="2">
       <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
     </svg>
   </a>
+
 
 
 
@@ -793,28 +849,28 @@
 <!-- Porta animação -->
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    /* Mantém a animação só em telas > 400 px, como antes */
-    if (window.innerWidth <= 400) return;
-
     const esq = document.getElementById("porta-esquerda");
     const dir = document.getElementById("porta-direita");
-    const logo = document.getElementById("logo-elevador");
+    const logoDesktop = document.getElementById("logo-elevador");
+    const logoMobile = document.getElementById("logo-elevador-mobile");
     const botoes = document.getElementById("botoes-elevador");
     const scroll = document.getElementById("scroll-indicator");
 
-
-    /* Pequeno atraso para evitar flash durante o load */
     setTimeout(() => {
-
-      /* 1) Portas deslizam */
       esq.classList.add("door-open-left");
       dir.classList.add("door-open-right");
 
-      /* 2) Logo aparece (quase junto) */
-      logo.classList.remove("opacity-0");
-      logo.classList.add("opacity-100");
+      // Aparecer ambas logos (se existirem)
+      if (logoDesktop) {
+        logoDesktop.classList.remove("opacity-0");
+        logoDesktop.classList.add("opacity-100");
+      }
 
-      /* 3) Quando o deslizamento termina, some as portas e mostra os botões */
+      if (logoMobile) {
+        logoMobile.classList.remove("opacity-0");
+        logoMobile.classList.add("opacity-100");
+      }
+
       setTimeout(() => {
         esq.classList.add("door-fade");
         dir.classList.add("door-fade");
@@ -822,17 +878,15 @@
         botoes.classList.remove("hidden");
         scroll.classList.remove("hidden");
 
-        // leve fade-in
         setTimeout(() => {
           botoes.classList.add("opacity-100");
           scroll.classList.add("opacity-100");
         }, 50);
-
-      }, 850);                   // ligeiramente > 0.8 s (tempo do transition)
-    }, 300);                     // mesmo delay que você já usava
+      }, 850);
+    }, 300);
   });
-
 </script>
+
 <!-- GSAP CDN -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-…"
   crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -854,7 +908,26 @@
     gsap.to(btn, { autoAlpha: show ? 1 : 0, duration: .4 });
   });
 </script>
+<script>
+  let menuAberto = false;
 
+  function toggleMenu() {
+    const menu = document.getElementById("menuLateral");
 
+    if (!menuAberto) {
+      gsap.set(menu, { x: "100%" }); //Garante que o menu começa fora da tela
+      gsap.to(menu, { x: 0, duration: 0.4, ease: "power2.out" });
+      menu.classList.remove("translate-x-full");
+      menuAberto = true;
+    } else {
+      gsap.to(menu, {
+        x: "100%", duration: 0.4, ease: "power2.in", onComplete: () => {
+          menu.classList.add("translate-x-full");
+        }
+      });
+      menuAberto = false;
+    }
+  }
+</script>
 
 </html>
