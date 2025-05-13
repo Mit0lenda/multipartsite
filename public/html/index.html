@@ -30,6 +30,19 @@
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
   <style>
+      :root{
+    --nav-h:0px;           /* mobile */
+  }
+  @media (min-width:768px){
+    :root{ --nav-h:0px; }  /* md+  */
+  }
+
+  /* utilitário para Tailwind JIT (fica no mesmo <style>): */
+  @layer utilities{
+    .min-h-screen-nav{
+      min-height:calc(100vh - var(--nav-h));
+    }
+  }
     /* Todas as portas */
     .door {
       position: absolute;
@@ -84,9 +97,11 @@
 <body class="bg-white text-black font-sans">
 
   <!-- Cabeçalho -->
-  <header
-    class="flex items-center justify-between px-4 py-2 border-b-2 border-orange-500 sticky top-0 bg-white z-50 h-[70px] md:h-[80px]"
-    role="banner">
+<header
+  class="flex items-center justify-between px-4 py-2 border-b-2 border-orange-500 
+         sticky top-0 bg-white z-50 h-[60px] md:h-[70px]"
+  role="banner">
+
 
     <!-- Container logo + botão hamburguer (mobile) -->
     <div class="flex items-center justify-between w-full md:w-auto">
@@ -163,68 +178,80 @@
 
 <!-- Home -->
 <section id="home"
-  class="relative w-full min-h-screen max-h-screen overflow-hidden flex flex-col justify-center items-center px-4 text-center">
+  class="relative w-full min-h-screen-nav flex items-center justify-center
+         overflow-hidden px-4 text-center pt-[var(--nav-h)]">
 
-
-  <!-- Imagem de fundo -->
+  <!-- Fundo e portas (continuam absolutos) -->
   <div class="absolute inset-0 z-0">
     <div class="absolute inset-0 bg-[url('/public/img/elevador/elevador.png')] bg-cover bg-center"></div>
     <div class="absolute inset-0 bg-white/40"></div>
   </div>
 
-  <!-- Logo para DESKTOP -->
-  <img id="logo-elevador" src="/public/img/multipartes_logo_transparente.png"
-    class="hidden sm:block absolute inset-0 top-10 sm:top-[-10%] m-auto w-56 sm:w-80 md:w-96 lg:w-[500px] opacity-0 transition-opacity duration-700 ease-in-out"
-    alt="Logo MULTIPARTS" loading="lazy" />
+  <img id="porta-esquerda"  src="/public/img/elevador/direita.png"
+       class="door door-left z-10"   alt="Porta esquerda"  loading="lazy"/>
+  <img id="porta-direita"   src="/public/img/elevador/esquerda.png"
+       class="door door-right z-10"  alt="Porta direita"   loading="lazy"/>
 
-  <!-- Logo para MOBILE -->
-  <img id="logo-elevador-mobile" src="/public/img/logo_celular.png"
-    class="block sm:hidden absolute inset-0 top-[10px] translate-y-[-10%] m-auto w-[500px] opacity-0 transition-opacity duration-700 ease-in-out"
-    alt="Logo MULTIPARTS Mobile" loading="lazy" />
+  <!-- >>> CONTEÚDO CENTRAL <<< -->
+  <div id="hero-content"
+       class="relative z-20 flex flex-col items-center gap-8">
 
-  <!-- Porta esquerda -->
-  <img id="porta-esquerda" src="/public/img/elevador/direita.png" class="door door-left z-10"
-    alt="Porta esquerda do elevador" loading="lazy" />
+    <!-- Logo desktop -->
+    <img id="logo-elevador"
+         src="/public/img/multipartes_logo_transparente.png"
+         class="hidden sm:block w-56 sm:w-80 md:w-96 lg:w-[500px]
+                opacity-0 transition-opacity duration-700 ease-in-out"
+         alt="Logo MULTIPARTS" loading="lazy"/>
 
-  <!-- Porta direita -->
-  <img id="porta-direita" src="/public/img/elevador/esquerda.png" class="door door-right z-10"
-    alt="Porta direita do elevador" loading="lazy" />
+    <!-- Logo mobile -->
+    <img id="logo-elevador-mobile"
+         src="/public/img/logo_celular.png"
+         class="block sm:hidden w-64 opacity-0 transition-opacity
+                duration-700 ease-in-out"
+         alt="Logo MULTIPARTS Mobile" loading="lazy"/>
 
-  <!-- Botões e seta -->
-  <div id="botoes-elevador"
-    class="hidden opacity-0 transition-opacity duration-700 flex flex-col gap-5 justify-center items-center mt-[600px] mb-12 z-10 ">
+    <!-- Botões + seta -->
+    <div id="botoes-elevador"
+         class=" hidden opacity-0 flex flex-col items-center gap-5">
 
-    <!-- Botão Catálogo -->
-    <a href="#catalogo"
-      class="flex items-center gap-2 bg-orange-500 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:bg-orange-600 transition">
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-      </svg>
-      Ver Catálogo
-    </a>
+<a href="#catalogo"
+  class="flex items-center gap-2 bg-orange-500 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:bg-orange-600 transition">
+  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+  </svg>
+  Ver Catálogo
+</a>
 
-    <!-- Botão Contato -->
-    <a href="#contato"
-      class="flex items-center gap-2 bg-neutral-800 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:bg-neutral-700 transition">
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-          d="M21 10a9 9 0 11-18 0 9 9 0 0118 0z" />
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12h.01M12 12h.01M9 12h.01" />
-      </svg>
-      Fale conosco
-    </a>
 
-    <!-- Seta de scroll -->
-    <a href="#sobre" id="scroll-indicator"
-      class="hidden opacity-0 flex items-center justify-center mt-4 w-14 h-14 md:w-16 md:h-16 rounded-full bg-orange-500 text-white shadow-lg hover:bg-orange-600 transition">
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 md:w-7 md:h-7" fill="none" viewBox="0 0 24 24"
-        stroke="currentColor" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-      </svg>
-    </a>
+<a href="#contato"
+  class="flex items-center gap-2 bg-neutral-800 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:bg-neutral-700 transition">
+  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+      d="M21 10a9 9 0 11-18 0 9 9 0 0118 0z" />
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12h.01M12 12h.01M9 12h.01" />
+  </svg>
+  Fale conosco
+</a>
 
-  </div>
+
+      <!-- Seta -->
+      <a href="#sobre" id="scroll-indicator"
+         class="hidden opacity-0 w-14 h-14 md:w-16 md:h-16
+                flex items-center justify-center mt-4
+                rounded-full bg-orange-500 text-white shadow-lg
+                hover:bg-orange-600 transition">
+        <svg xmlns="http://www.w3.org/2000/svg"
+             class="w-6 h-6 md:w-7 md:h-7" fill="none"
+             viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M19 9l-7 7-7-7"/>
+        </svg>
+      </a>
+
+    </div><!-- /botoes-elevador -->
+  </div><!-- /hero-content -->
 </section>
+
 
   <!-- Agora o novo Sobre -->
   <section id="sobre" class="relative py-20 px-6 overflow-hidden bg-gray-100">
@@ -836,42 +863,34 @@
 <!-- Porta animação -->
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    const esq = document.getElementById("porta-esquerda");
-    const dir = document.getElementById("porta-direita");
-    const logoDesktop = document.getElementById("logo-elevador");
-    const logoMobile = document.getElementById("logo-elevador-mobile");
-    const botoes = document.getElementById("botoes-elevador");
-    const scroll = document.getElementById("scroll-indicator");
+  const esq      = document.getElementById("porta-esquerda");
+  const dir      = document.getElementById("porta-direita");
+  const logoD    = document.getElementById("logo-elevador");
+  const logoM    = document.getElementById("logo-elevador-mobile");
+  const botoes   = document.getElementById("botoes-elevador");
+  const seta     = document.getElementById("scroll-indicator");
 
-    setTimeout(() => {
-      esq.classList.add("door-open-left");
-      dir.classList.add("door-open-right");
+  /* ---------- abre portas ---------- */
+  esq.classList.add("door-open-left");
+  dir.classList.add("door-open-right");
 
-      // Aparecer ambas logos (se existirem)
-      if (logoDesktop) {
-        logoDesktop.classList.remove("opacity-0");
-        logoDesktop.classList.add("opacity-100");
-      }
+  /* ---------- timeline do hero ---------- */
+  // estado inicial
+  gsap.set([logoD, logoM],   {y: 0,  opacity: 0});
+  gsap.set([botoes, seta],   {y: 30, opacity: 0});
 
-      if (logoMobile) {
-        logoMobile.classList.remove("opacity-0");
-        logoMobile.classList.add("opacity-100");
-      }
+  // libere botões e seta da classe 'hidden' _antes_ de animar
+  botoes.classList.remove("hidden");
+  seta.classList.remove("hidden");
 
-      setTimeout(() => {
-        esq.classList.add("door-fade");
-        dir.classList.add("door-fade");
+  const tl = gsap.timeline({delay: .3});          // .3 = tempo de porta abrindo
 
-        botoes.classList.remove("hidden");
-        scroll.classList.remove("hidden");
+  tl.to([logoD, logoM],   {opacity: 1, duration: .4, ease: "power1.out"}) // fade-in
+    .to([logoD, logoM],   {y: -40,  duration: .7, ease: "power2.out"})    // sobe 40 px
+    .to([botoes, seta],   {y: 0,    opacity: 1,  duration: .5, ease: "power2.out"}, "+=.2"); 
+    // "+=.2" = espera 0 .2 s depois que o logo parou
+});
 
-        setTimeout(() => {
-          botoes.classList.add("opacity-100");
-          scroll.classList.add("opacity-100");
-        }, 50);
-      }, 850);
-    }, 300);
-  });
 </script>
 
 <!-- GSAP CDN -->
