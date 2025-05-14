@@ -112,7 +112,7 @@
 
       <!-- Botão Hambúrguer (visível só no mobile) -->
       <button id="btnMenu" class="md:hidden p-2 ml-auto" onclick="toggleMenu()">
-        <svg class="w-6 h-6 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-4 h-4 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
@@ -159,7 +159,7 @@
   </header>
   <!-- Menu Lateral Mobile -->
   <div id="menuLateral"
-    class="fixed top-0 right-0 w-64 h-full bg-white shadow-lg transform translate-x-full transition-transform duration-300 z-50 md:hidden">
+    class="fixed top-0 right-0 w-56 h-full bg-white shadow-lg transform translate-x-full transition-transform duration-300 z-50 md:hidden">
     <div class="p-4 flex justify-between items-center border-b">
       <span class="font-bold text-orange-500 text-lg">Menu</span>
       <button onclick="toggleMenu()" class="text-gray-700 text-2xl">&times;</button>
@@ -169,13 +169,55 @@
       <a href="#sobre" onclick="toggleMenu()" class="text-gray-700 font-semibold hover:text-orange-500">Sobre</a>
       <a href="#catalogo" onclick="toggleMenu()" class="text-gray-700 font-semibold hover:text-orange-500">Catálogo</a>
       <a href="#contato" onclick="toggleMenu()" class="text-gray-700 font-semibold hover:text-orange-500">Contato</a>
-      <hr />
-      <a href="https://lista.mercadolivre.com.br/_CustId_114944990" class="text-yellow-600">Mercado Livre</a>
-      <a href="https://wa.me/555197664066" class="text-green-600">WhatsApp</a>
-      <a href="https://www.instagram.com/multipartspecas" class="text-pink-500">Instagram</a>
-      <a href="https://www.facebook.com/share/15qZtV9Wjq/" class="text-blue-600">Facebook</a>
-      
+<hr />
+
+<a href="https://lista.mercadolivre.com.br/_CustId_114944990" target="_blank"
+   class="flex items-center gap-2 border border-orange-500 text-black bg-white py-1.5 px-3 rounded-full hover:bg-orange-100 transition text-sm font-semibold shadow-sm">
+  <img src="/public/img/icons/mercadolivre.png" alt="Mercado Livre" class="w-5 h-5" />
+  Mercado Livre
+</a>
+
+<a href="https://wa.me/555197664066" target="_blank"
+   class="flex items-center gap-2 border border-orange-500 text-black bg-white py-1.5 px-3 rounded-full hover:bg-orange-100 transition text-sm font-semibold shadow-sm">
+  <img src="/public/img/icons/whatsapp.png" alt="WhatsApp" class="w-5 h-5" />
+  WhatsApp
+</a>
+
+<a href="https://www.instagram.com/multipartspecas" target="_blank"
+   class="flex items-center gap-2 border border-orange-500 text-black bg-white py-1.5 px-3 rounded-full hover:bg-orange-100 transition text-sm font-semibold shadow-sm">
+  <img src="/public/img/icons/instagram.png" alt="Instagram" class="w-5 h-5" />
+  Instagram
+</a>
+
+<a href="https://www.facebook.com/share/15qZtV9Wjq/" target="_blank"
+   class="flex items-center gap-2 border border-orange-500 text-black bg-white py-1.5 px-3 rounded-full hover:bg-orange-100 transition text-sm font-semibold shadow-sm">
+  <img src="/public/img/icons/facebook.png" alt="Facebook" class="w-5 h-5" />
+  Facebook
+</a>
+
+<hr />
+<!-- Desenvolvido por Codaryn - responsivo dentro do menu lateral -->
+<div class="mt-6 flex justify-center px-2">
+  <a href="https://codaryn.com" target="_blank" rel="noopener noreferrer"
+     class="flex items-center justify-center gap-2 bg-white px-3 py-2 rounded-xl border border-gray-300
+            shadow-md hover:shadow-lg transition-all duration-300 group text-xs font-[Roboto_Mono]
+            whitespace-nowrap max-w-[200px] w-full mx-auto">
+    
+    <span>
+      <span class="text-blue-500">Desenvolvido  por</span>
+    </span>
+
+    <img src="/public/img/codarynlogo.png"
+         alt="Logo Codaryn"
+         class="h-4 w-auto opacity-90 transition duration-300 group-hover:opacity-100 group-hover:brightness-125"
+         loading="lazy">
+  </a>
+</div>
+
+
     </nav>
+    
+
   </div>
 
 
@@ -216,36 +258,44 @@
 
 
 
-    <!-- Botões + seta -->
 <!-- Botões -->
 <div id="botoes-elevador"
      class="hidden opacity-0 flex flex-col items-center gap-5">
   
-  <!-- Botão Catálogo -->
-  <a href="#catalogo"
-     class="w-full lg:w-[260px] flex items-center justify-center gap-2 bg-orange-500 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:bg-orange-600 transition">
-    <svg xmlns="http://www.w3.org/2000/svg"
-         class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M9 5l7 7-7 7" />
+  <!-- Botões lado a lado -->
+  <div class="flex flex-wrap justify-center gap-4">
+    <!-- Ver Catálogo -->
+    <a href="#catalogo"
+       class="flex items-center justify-center gap-2 bg-orange-500 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:bg-orange-600 transition">
+      <svg xmlns="http://www.w3.org/2000/svg"
+           class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M9 5l7 7-7 7" />
+      </svg>
+      Ver Catálogo
+    </a>
+
+    <!-- Fale conosco -->
+    <a href="#contato"
+       class="flex items-center justify-center gap-2 bg-neutral-800 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:bg-neutral-700 transition">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" viewBox="0 0 512 512" fill="currentColor">
+        <path d="M256 32C114.6 32 0 125.1 0 240c0 49.7 24.5 95.4 65.6 131.4-14.3 42.5-56.1 66.5-56.5 66.7C5.3 440.5 0 447.5 0 455.1c0 4.6 2 9 5.5 12.1 2.9 2.6 6.6 3.9 10.4 3.9 24.2 0 73.6-7.8 113.1-36.6C166.4 450.2 209.9 464 256 464c141.4 0 256-93.1 256-208S397.4 32 256 32z"/>
+      </svg>
+      Fale conosco
+    </a>
+  </div>
+
+  <!-- Seta de rolagem abaixo dos botões -->
+  <a href="#sobre" id="scroll-indicator"
+     class="mt-6 flex items-center justify-center w-12 h-12 rounded-full bg-orange-500 text-white shadow-lg hover:bg-orange-600 transition">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+         viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
     </svg>
-    Ver Catálogo
   </a>
 
-  <!-- Botão Contato -->
-<a href="#contato"
-   class="w-full lg:w-[260px] flex items-center justify-center gap-2 bg-neutral-800 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:bg-neutral-700 transition">
-<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" viewBox="0 0 512 512" fill="currentColor">
-  <path d="M256 32C114.6 32 0 125.1 0 240c0 49.7 24.5 95.4 65.6 131.4-14.3 42.5-56.1 66.5-56.5 66.7C5.3 440.5 0 447.5 0 455.1c0 4.6 2 9 5.5 12.1 2.9 2.6 6.6 3.9 10.4 3.9 24.2 0 73.6-7.8 113.1-36.6C166.4 450.2 209.9 464 256 464c141.4 0 256-93.1 256-208S397.4 32 256 32z"/>
-</svg>
-
-
-  Fale conosco
-</a>
-
-
-
 </div>
+
 
 
 <!-- Seta separada -->
