@@ -209,7 +209,7 @@
 <!-- Home -->
 <section id="home"
   class="relative w-full min-h-screen-nav flex items-center justify-center
-         overflow-hidden px-4 text-center pt-[var(--nav-h)]">
+         overflow-hidden px-4 text-center pt-[var(--nav-h)] pr-6">
 
   <!-- Fundo e portas (continuam absolutos) -->
   <div class="absolute inset-0 z-0">
@@ -236,7 +236,7 @@
 
     <!-- Logo mobile -->
 <img id="logo-elevador-mobile"
-     src="/public/img/logo_celular.png"
+     src="/public/img/multipartes_logo_transparente.png"
      class="block sm:hidden w-[80vw] max-w-xs opacity-0 transition-opacity
             duration-700 ease-in-out"
      alt="Logo MULTIPARTS Mobile" loading="lazy"/>
@@ -248,7 +248,8 @@
      class="hidden opacity-0 flex flex-col items-center gap-5">
   
   <!-- Botões lado a lado -->
-  <div class="flex flex-wrap justify-center gap-4">
+  <div class="flex flex-col sm:flex-row justify-center gap-4">
+
     <!-- Ver Catálogo -->
     <a href="#catalogo"
        class="flex items-center justify-center gap-2 bg-orange-500 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:bg-orange-600 transition">
@@ -257,11 +258,11 @@
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
               d="M9 5l7 7-7 7" />
       </svg>
-      Ver Catálogo
+      Ver catálogo
     </a>
 
     <!-- Fale conosco -->
-    <a href="#contato"
+    <a href="https://wa.me/555197664066" target="_blank"
        class="flex items-center justify-center gap-2 bg-neutral-800 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:bg-neutral-700 transition">
       <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" viewBox="0 0 512 512" fill="currentColor">
         <path d="M256 32C114.6 32 0 125.1 0 240c0 49.7 24.5 95.4 65.6 131.4-14.3 42.5-56.1 66.5-56.5 66.7C5.3 440.5 0 447.5 0 455.1c0 4.6 2 9 5.5 12.1 2.9 2.6 6.6 3.9 10.4 3.9 24.2 0 73.6-7.8 113.1-36.6C166.4 450.2 209.9 464 256 464c141.4 0 256-93.1 256-208S397.4 32 256 32z"/>
@@ -388,7 +389,7 @@
   </a>
 
   <section id="catalogo" class="py-16 px-6 bg-gray-50">
-    <h2 class="text-3xl font-bold text-center mb-12">Escolha a Marca do Elevador</h2>
+    <!--h2 class="text-3xl font-bold text-center mb-12">Escolha a Marca do Elevador</h2 -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto auto-rows-[180px]">
 <!-- Unidigital – agora ocupa a linha inteira -->
 <div
@@ -780,7 +781,7 @@
       <div class="flex flex-col justify-center space-y-6 text-center md:text-left">
         <div>
           <h2 class="text-2xl font-bold text-orange-500 mb-2">MULTIPARTS</h2>
-          <p class="text-gray-600">Especialistas em peças para elevadores.</p>
+          <p class="text-gray-600">Especialista em peças para elevadores</p>
         </div>
 
         <div>
