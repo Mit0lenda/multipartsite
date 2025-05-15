@@ -9,11 +9,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>MULTIPARTS - Peças para Elevadores</title>
-    <meta name="description" content="MULTIPARTS: especialista em peças para elevadores, fornecendo inovação, qualidade e agilidade em todo o Brasil.">
-    <meta name="keywords" content="peças para elevadores, manutenção de elevadores, acessórios de elevador, MULTIPARTS, elevadores, modernização de elevadores">
+    <meta name="description"
+        content="MULTIPARTS: especialista em peças para elevadores, fornecendo inovação, qualidade e agilidade em todo o Brasil.">
+    <meta name="keywords"
+        content="peças para elevadores, manutenção de elevadores, acessórios de elevador, MULTIPARTS, elevadores, modernização de elevadores">
     <meta name="author" content="MULTIPARTS Elevadores">
     <meta property="og:title" content="MULTIPARTS - Peças para Elevadores">
-    <meta property="og:description" content="Soluções em peças de alta qualidade para elevadores, entrega rápida e atendimento de excelência.">
+    <meta property="og:description"
+        content="Soluções em peças de alta qualidade para elevadores, entrega rápida e atendimento de excelência.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.multipartselevadores.com.br">
     <meta property="og:image" content="/public/img/logo.jpg">
@@ -29,26 +32,29 @@
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
     <style>
-         :root {
+        :root {
             --nav-h: 0px;
             /* mobile */
         }
-        
+
         @media (min-width:768px) {
-             :root {
+            :root {
                 --nav-h: 0px;
             }
+
             /* md+  */
         }
+
         /* utilitário para Tailwind JIT (fica no mesmo <style>): */
-        
+
         @layer utilities {
             .min-h-screen-nav {
                 min-height: calc(100vh - var(--nav-h));
             }
         }
+
         /* Todas as portas */
-        
+
         .door {
             position: absolute;
             /* sobrepõe no mesmo container */
@@ -59,28 +65,31 @@
             object-fit: cover;
             transition: transform .4s ease-in-out, opacity .4s ease-out;
         }
+
         /* Porta sai para a esquerda */
-        
+
         .door-left {
             left: 0;
             transform: translateX(0);
         }
-        
+
         .door-open-left {
             transform: translateX(-100%);
         }
+
         /* Porta sai para a direita */
-        
+
         .door-right {
             right: 0;
             transform: translateX(0);
         }
-        
+
         .door-open-right {
             transform: translateX(100%);
         }
+
         /* Some completamente após abrir */
-        
+
         .door-fade {
             opacity: 0;
             pointer-events: none;
@@ -111,14 +120,17 @@
         <!-- Container logo + botão sidebar (mobile) -->
         <div class="flex items-center justify-between w-full md:w-auto">
             <!-- Logo -->
-            <img src="/public/img/multipartes_logo_transparente.png" alt="Logo MULTIPARTS" class="h-12 sm:h-16 md:h-14 lg:h-16 w-auto object-contain" loading="lazy">
+            <img src="/public/img/multipartes_logo_transparente.png" alt="Logo MULTIPARTS"
+                class="h-12 sm:h-16 md:h-14 lg:h-16 w-auto object-contain" loading="lazy">
 
             <!-- Botão sidebar(visível só no mobile) -->
+            <!-- Botão sidebar(visível só no mobile) -->
             <button id="btnMenu" class="md:hidden p-2 ml-auto" onclick="toggleMenu()">
-                <svg class="w-4 h-4 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-7 h-7 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
             </button>
+
         </div>
 
         <!-- Menu de navegação para desktop -->
@@ -130,21 +142,25 @@
 
             <div class="flex items-center gap-2">
                 <!-- Mercado Livre -->
-                <a href="https://lista.mercadolivre.com.br/_CustId_114944990" target="_blank" class="flex items-center gap-1 border border-orange-500 text-black bg-white py-1.5 px-3 rounded-full hover:bg-orange-100 transition text-sm font-semibold shadow-sm">
+                <a href="https://lista.mercadolivre.com.br/_CustId_114944990" target="_blank"
+                    class="flex items-center gap-1 border border-orange-500 text-black bg-white py-1.5 px-3 rounded-full hover:bg-orange-100 transition text-sm font-semibold shadow-sm">
                     <img src="/public/img/icons/mercadolivre.png" alt="Mercado Livre" class="w-4 h-4" /> Mercado Livre
                 </a>
                 <!-- WhatsApp -->
-                <a href="https://wa.me/555197664066" target="_blank" class="flex items-center gap-1 border border-orange-500 text-black bg-white py-1.5 px-3 rounded-full hover:bg-orange-100 transition text-sm font-semibold shadow-sm">
+                <a href="https://wa.me/555197664066" target="_blank"
+                    class="flex items-center gap-1 border border-orange-500 text-black bg-white py-1.5 px-3 rounded-full hover:bg-orange-100 transition text-sm font-semibold shadow-sm">
                     <img src="/public/img/icons/whatsapp.png" alt="WhatsApp" class="w-4 h-4" /> WhatsApp
                 </a>
 
                 <!-- Instagram -->
-                <a href="https://www.instagram.com/multipartspecas" target="_blank" class="flex items-center gap-1 border border-orange-500 text-black bg-white py-1.5 px-3 rounded-full hover:bg-orange-100 transition text-sm font-semibold shadow-sm">
+                <a href="https://www.instagram.com/multipartspecas" target="_blank"
+                    class="flex items-center gap-1 border border-orange-500 text-black bg-white py-1.5 px-3 rounded-full hover:bg-orange-100 transition text-sm font-semibold shadow-sm">
                     <img src="/public/img/icons/instagram.png" alt="Instagram" class="w-4 h-4" /> Instagram
                 </a>
 
                 <!-- Facebook -->
-                <a href="https://www.facebook.com/share/15qZtV9Wjq/" target="_blank" class="flex items-center gap-1 border border-orange-500 text-black bg-white py-1.5 px-3 rounded-full hover:bg-orange-100 transition text-sm font-semibold shadow-sm">
+                <a href="https://www.facebook.com/share/15qZtV9Wjq/" target="_blank"
+                    class="flex items-center gap-1 border border-orange-500 text-black bg-white py-1.5 px-3 rounded-full hover:bg-orange-100 transition text-sm font-semibold shadow-sm">
                     <img src="/public/img/icons/facebook.png" alt="Facebook" class="w-4 h-4" /> Facebook
                 </a>
 
@@ -153,7 +169,8 @@
         </nav>
     </header>
     <!-- Menu Lateral Mobile -->
-    <div id="menuLateral" class="fixed top-0 right-0 w-44 h-full bg-white shadow-lg transform translate-x-full transition-transform duration-300 z-[9999] md:hidden">
+    <div id="menuLateral"
+        class="fixed top-0 right-0 w-44 h-full bg-white shadow-lg transform translate-x-full transition-transform duration-300 z-[9999] md:hidden">
         <div class="p-4 flex justify-between items-center border-b">
             <span class="font-bold text-orange-500 text-lg">Menu</span>
             <button onclick="toggleMenu()" class="text-gray-700 text-2xl">&times;</button>
@@ -161,23 +178,29 @@
         <nav class="p-4 flex flex-col gap-4">
             <a href="#home" onclick="toggleMenu()" class="text-gray-700 font-semibold hover:text-orange-500">Início</a>
             <a href="#sobre" onclick="toggleMenu()" class="text-gray-700 font-semibold hover:text-orange-500">Sobre</a>
-            <a href="#catalogo" onclick="toggleMenu()" class="text-gray-700 font-semibold hover:text-orange-500">Catálogo</a>
-            <a href="#contato" onclick="toggleMenu()" class="text-gray-700 font-semibold hover:text-orange-500">Contato</a>
+            <a href="#catalogo" onclick="toggleMenu()"
+                class="text-gray-700 font-semibold hover:text-orange-500">Catálogo</a>
+            <a href="#contato" onclick="toggleMenu()"
+                class="text-gray-700 font-semibold hover:text-orange-500">Contato</a>
             <hr />
 
-            <a href="https://lista.mercadolivre.com.br/_CustId_114944990" target="_blank" class="flex items-center gap-2 border border-orange-500 text-black bg-white py-1.5 px-3 rounded-full hover:bg-orange-100 transition text-sm font-semibold shadow-sm">
+            <a href="https://lista.mercadolivre.com.br/_CustId_114944990" target="_blank"
+                class="flex items-center gap-2 border border-orange-500 text-black bg-white py-1.5 px-3 rounded-full hover:bg-orange-100 transition text-sm font-semibold shadow-sm">
                 <img src="/public/img/icons/mercadolivre.png" alt="Mercado Livre" class="w-5 h-5" /> Mercado Livre
             </a>
 
-            <a href="https://wa.me/555197664066" target="_blank" class="flex items-center gap-2 border border-orange-500 text-black bg-white py-1.5 px-3 rounded-full hover:bg-orange-100 transition text-sm font-semibold shadow-sm">
+            <a href="https://wa.me/555197664066" target="_blank"
+                class="flex items-center gap-2 border border-orange-500 text-black bg-white py-1.5 px-3 rounded-full hover:bg-orange-100 transition text-sm font-semibold shadow-sm">
                 <img src="/public/img/icons/whatsapp.png" alt="WhatsApp" class="w-5 h-5" /> WhatsApp
             </a>
 
-            <a href="https://www.instagram.com/multipartspecas" target="_blank" class="flex items-center gap-2 border border-orange-500 text-black bg-white py-1.5 px-3 rounded-full hover:bg-orange-100 transition text-sm font-semibold shadow-sm">
+            <a href="https://www.instagram.com/multipartspecas" target="_blank"
+                class="flex items-center gap-2 border border-orange-500 text-black bg-white py-1.5 px-3 rounded-full hover:bg-orange-100 transition text-sm font-semibold shadow-sm">
                 <img src="/public/img/icons/instagram.png" alt="Instagram" class="w-5 h-5" /> Instagram
             </a>
 
-            <a href="https://www.facebook.com/share/15qZtV9Wjq/" target="_blank" class="flex items-center gap-2 border border-orange-500 text-black bg-white py-1.5 px-3 rounded-full hover:bg-orange-100 transition text-sm font-semibold shadow-sm">
+            <a href="https://www.facebook.com/share/15qZtV9Wjq/" target="_blank"
+                class="flex items-center gap-2 border border-orange-500 text-black bg-white py-1.5 px-3 rounded-full hover:bg-orange-100 transition text-sm font-semibold shadow-sm">
                 <img src="/public/img/icons/facebook.png" alt="Facebook" class="w-5 h-5" /> Facebook
             </a>
 
@@ -201,8 +224,10 @@
             <div class="absolute inset-0 bg-white/40"></div>
         </div>
 
-        <img id="porta-esquerda" src="/public/img/elevador/direita.png" class="door door-left z-10" alt="Porta esquerda" loading="lazy" />
-        <img id="porta-direita" src="/public/img/elevador/esquerda.png" class="door door-right z-10" alt="Porta direita" loading="lazy" />
+        <img id="porta-esquerda" src="/public/img/elevador/direita.png" class="door door-left z-10" alt="Porta esquerda"
+            loading="lazy" />
+        <img id="porta-direita" src="/public/img/elevador/esquerda.png" class="door door-right z-10" alt="Porta direita"
+            loading="lazy" />
 
         <!-- >>> CONTEÚDO CENTRAL <<< -->
         <div id="hero-content" class="relative z-20 flex flex-col items-center gap-8">
@@ -225,15 +250,19 @@
                 <div class="flex flex-col sm:flex-row justify-center gap-4">
 
                     <!-- Ver Catálogo -->
-                    <a href="#catalogo" class="flex items-center justify-center gap-2 bg-orange-500 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:bg-orange-600 transition">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <a href="#catalogo"
+                        class="flex items-center justify-center gap-2 bg-orange-500 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:bg-orange-600 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                         </svg> Ver catálogo
                     </a>
 
                     <!-- Fale conosco -->
-                    <a href="https://wa.me/555197664066" target="_blank" class="flex items-center justify-center gap-2 bg-neutral-800 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:bg-neutral-700 transition">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" viewBox="0 0 512 512" fill="currentColor">
+                    <a href="https://wa.me/555197664066" target="_blank"
+                        class="flex items-center justify-center gap-2 bg-neutral-800 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:bg-neutral-700 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" viewBox="0 0 512 512"
+                            fill="currentColor">
                             <path
                                 d="M256 32C114.6 32 0 125.1 0 240c0 49.7 24.5 95.4 65.6 131.4-14.3 42.5-56.1 66.5-56.5 66.7C5.3 440.5 0 447.5 0 455.1c0 4.6 2 9 5.5 12.1 2.9 2.6 6.6 3.9 10.4 3.9 24.2 0 73.6-7.8 113.1-36.6C166.4 450.2 209.9 464 256 464c141.4 0 256-93.1 256-208S397.4 32 256 32z" />
                         </svg> Fale conosco
@@ -241,8 +270,10 @@
                 </div>
 
                 <!-- Seta de rolagem abaixo dos botões -->
-                <a href="#sobre" id="scroll-indicator" class="mt-6 flex items-center justify-center w-12 h-12 rounded-full bg-orange-500 text-white shadow-lg hover:bg-orange-600 transition">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <a href="#sobre" id="scroll-indicator"
+                    class="mt-6 flex items-center justify-center w-12 h-12 rounded-full bg-orange-500 text-white shadow-lg hover:bg-orange-600 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
                     </svg>
                 </a>
@@ -257,7 +288,8 @@
           w-10 h-10 md:w-16 md:h-16
           rounded-full bg-orange-500 text-white shadow-lg
           hover:bg-orange-600 transition opacity-0 hidden">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 md:w-7 md:h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 md:w-7 md:h-7" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
                 </svg>
             </a>
@@ -274,7 +306,8 @@
 
         <!-- Fundo com Imagem + Camada de Escurecimento -->
         <div class="absolute inset-0 z-0">
-            <img src="/public/img/fundo-elevador-blur.webp" alt="Imagem Elevador" class="w-full h-full object-cover blur-[1px] opacity-20 bg-fixed" loading="lazy">
+            <img src="/public/img/fundo-elevador-blur.webp" alt="Imagem Elevador"
+                class="w-full h-full object-cover blur-[1px] opacity-20 bg-fixed" loading="lazy">
             <div class="absolute inset-0 bg-gradient-to-b from-white/30 via-white/10 to-gray-900/20"></div>
             <!-- Camada degradê -->
         </div>
@@ -283,41 +316,56 @@
         <div class="relative z-10 max-w-screen-xl mx-auto text-center px-6 md:px-12">
 
             <!-- Título -->
-            <h2 data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-offset="200" class="text-4xl md:text-5xl font-bold text-orange-500 tracking-wide mb-8 transition-all duration-300 ease-in-out">
+            <h2 data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-offset="200"
+                class="text-4xl md:text-5xl font-bold text-orange-500 tracking-wide mb-8 transition-all duration-300 ease-in-out">
                 Sobre a MULTIPARTS
             </h2>
 
             <!-- Texto Principal -->
-            <p data-aos="fade-up" data-aos-delay="150" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-offset="200" class="text-gray-800 max-w-3xl mx-auto leading-relaxed text-lg md:text-xl mb-16 transition-all duration-300 ease-in-out">
-                Fundada em 2022, a <strong class="text-orange-500">MULTIPARTS</strong> é especializada no comércio de peças para elevadores multimarcas. Localizada em Guaíba, no Rio Grande do Sul, nossa empresa atende empresas mantenedoras e profissionais
-                do setor de elevadores, oferecendo soluções práticas, ágeis e confiáveis. Na MULTIPARTS, você encontra parceria e confiança para manter seu trabalho em movimento.
+            <p data-aos="fade-up" data-aos-delay="150" data-aos-duration="800" data-aos-easing="ease-in-out"
+                data-aos-offset="200"
+                class="text-gray-800 max-w-3xl mx-auto leading-relaxed text-lg md:text-xl mb-16 transition-all duration-300 ease-in-out">
+                Fundada em 2022, a <strong class="text-orange-500">MULTIPARTS</strong> é especializada no comércio de
+                peças para elevadores multimarcas. Localizada em Guaíba, no Rio Grande do Sul, nossa empresa atende
+                empresas mantenedoras e profissionais
+                do setor de elevadores, oferecendo soluções práticas, ágeis e confiáveis. Na MULTIPARTS, você encontra
+                parceria e confiança para manter seu trabalho em movimento.
             </p>
 
             <!-- Blocos de Valores -->
             <div class="grid gap-12 grid-cols-1 sm:grid-cols-3 text-center">
 
                 <!-- Confiança -->
-                <div data-aos="fade-up" data-aos-delay="300" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-offset="200" class="flex flex-col items-center transition transform hover:scale-105 ease-in-out duration-300">
+                <div data-aos="fade-up" data-aos-delay="300" data-aos-duration="800" data-aos-easing="ease-in-out"
+                    data-aos-offset="200"
+                    class="flex flex-col items-center transition transform hover:scale-105 ease-in-out duration-300">
                     <div class="bg-orange-100 p-6 rounded-full mb-4 shadow-lg">
-                        <img src="/public/img/icons/aperto.png" alt="Ícone Confiança" class="h-16 w-16 object-contain" loading="lazy">
+                        <img src="/public/img/icons/aperto.png" alt="Ícone Confiança" class="h-16 w-16 object-contain"
+                            loading="lazy">
                     </div>
                     <h3 class="text-xl font-semibold text-gray-800 mb-2">Confiança</h3>
                     <p class="text-gray-700 text-sm">Comprometimento com prazos e qualidade.</p>
                 </div>
 
                 <!-- Inovação -->
-                <div data-aos="fade-up" data-aos-delay="450" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-offset="200" class="flex flex-col items-center transition transform hover:scale-105 ease-in-out duration-300">
+                <div data-aos="fade-up" data-aos-delay="450" data-aos-duration="800" data-aos-easing="ease-in-out"
+                    data-aos-offset="200"
+                    class="flex flex-col items-center transition transform hover:scale-105 ease-in-out duration-300">
                     <div class="bg-orange-100 p-6 rounded-full mb-4 shadow-lg">
-                        <img src="/public/img/icons/lampada.png" alt="Ícone Inovação" class="h-16 w-16 object-contain" loading="lazy">
+                        <img src="/public/img/icons/lampada.png" alt="Ícone Inovação" class="h-16 w-16 object-contain"
+                            loading="lazy">
                     </div>
                     <h3 class="text-xl font-semibold text-gray-800 mb-2">Inovação</h3>
                     <p class="text-gray-700 text-sm">Soluções modernas para o transporte vertical.</p>
                 </div>
 
                 <!-- Excelência -->
-                <div data-aos="fade-up" data-aos-delay="600" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-offset="200" class="flex flex-col items-center transition transform hover:scale-105 ease-in-out duration-300">
+                <div data-aos="fade-up" data-aos-delay="600" data-aos-duration="800" data-aos-easing="ease-in-out"
+                    data-aos-offset="200"
+                    class="flex flex-col items-center transition transform hover:scale-105 ease-in-out duration-300">
                     <div class="bg-orange-100 p-6 rounded-full mb-4 shadow-lg">
-                        <img src="/public/img/icons/trofeu.png" alt="Ícone Excelência" class="h-16 w-16 object-contain" loading="lazy">
+                        <img src="/public/img/icons/trofeu.png" alt="Ícone Excelência" class="h-16 w-16 object-contain"
+                            loading="lazy">
                     </div>
                     <h3 class="text-xl font-semibold text-gray-800 mb-2">Excelência</h3>
                     <p class="text-gray-700 text-sm">Atendimento e produtos de alta qualidade.</p>
@@ -329,8 +377,10 @@
     </section>
 
     <!-- Botão WhatsApp Flutuante -->
-    <a href="https://wa.me/555197664066" target="_blank" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all duration-300 z-50">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 sm:w-7 sm:h-7 text-white" viewBox="0 0 24 24" fill="currentColor">
+    <a href="https://wa.me/555197664066" target="_blank"
+        class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all duration-300 z-50">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 sm:w-7 sm:h-7 text-white" viewBox="0 0 24 24"
+            fill="currentColor">
             <path
                 d="M12 0C5.373 0 0 5.373 0 12c0 2.116.553 4.121 1.6 5.906L0 24l6.305-1.61A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm.01 22.07a9.957 9.957 0 01-5.08-1.395l-.365-.217-3.739.954.998-3.65-.238-.376a9.992 9.992 0 1118.533-2.564 9.991 9.991 0 01-10.11 7.248zm5.31-7.57c-.286-.144-1.693-.835-1.955-.93-.262-.095-.453-.143-.645.144-.191.286-.74.929-.91 1.12-.167.191-.335.215-.621.072-.286-.144-1.209-.446-2.3-1.423-.85-.757-1.424-1.692-1.592-1.978-.167-.286-.018-.44.126-.583.13-.13.287-.335.43-.502.144-.167.191-.287.287-.478.096-.191.048-.358-.024-.502-.072-.144-.645-1.556-.883-2.133-.232-.558-.47-.482-.645-.49l-.55-.009a1.055 1.055 0 00-.76.353c-.262.286-.998.974-.998 2.375s1.02 2.755 1.162 2.944c.144.191 2.009 3.07 4.87 4.3.681.294 1.212.47 1.626.601.682.217 1.302.186 1.79.113.546-.08 1.693-.692 1.931-1.36.238-.668.238-1.241.167-1.36-.07-.12-.262-.191-.548-.334z" />
         </svg>
@@ -350,172 +400,232 @@
 
 
             <!-- Wittur -->
-            <div onclick="openModal('modalWittur')" class="cursor-pointer bg-[#e8f3f1] p-6 rounded-xl shadow-md text-center hover:ring-4 hover:ring-orange-500 hover:ring-opacity-20 transition transform hover:scale-105 h-full flex items-center justify-center">
-                <img src="/public/img/marcas/wittur.png" alt="Logo Wittur" class="max-h-28 max-w-40 w-full h-auto mx-auto object-contain transition-transform duration-300 hover:scale-105">
+            <div onclick="openModal('modalWittur')"
+                class="cursor-pointer bg-[#e8f3f1] p-6 rounded-xl shadow-md text-center hover:ring-4 hover:ring-orange-500 hover:ring-opacity-20 transition transform hover:scale-105 h-full flex items-center justify-center">
+                <img src="/public/img/marcas/wittur.png" alt="Logo Wittur"
+                    class="max-h-28 max-w-40 w-full h-auto mx-auto object-contain transition-transform duration-300 hover:scale-105">
             </div>
             <!-- Atlas Schindler -->
-            <div onclick="openModal('modalAtlas')" class="cursor-pointer bg-[#fcecec] p-6 rounded-xl shadow-md text-center hover:ring-4 hover:ring-orange-500 hover:ring-opacity-20 transition transform hover:scale-105 h-full flex items-center justify-center">
-                <img src="/public/img/marcas/atlas_Schindler.png" alt="Logo Atlas Schindler" class="max-h-28 max-w-40 w-full h-auto mx-auto object-contain transition-transform duration-300 hover:scale-105">
+            <div onclick="openModal('modalAtlas')"
+                class="cursor-pointer bg-[#fcecec] p-6 rounded-xl shadow-md text-center hover:ring-4 hover:ring-orange-500 hover:ring-opacity-20 transition transform hover:scale-105 h-full flex items-center justify-center">
+                <img src="/public/img/marcas/atlas_Schindler.png" alt="Logo Atlas Schindler"
+                    class="max-h-28 max-w-40 w-full h-auto mx-auto object-contain transition-transform duration-300 hover:scale-105">
             </div>
             <!-- TKE -->
-            <div onclick="openModal('modalTKE')" class="cursor-pointer bg-[#fdf0e7] p-6 rounded-xl shadow-md text-center hover:ring-4 hover:ring-orange-500 hover:ring-opacity-20 transition transform hover:scale-105 h-full flex items-center justify-center">
-                <img src="/public/img/marcas/TKE.png" alt="Logo TKE" class="max-h-28 max-w-40 w-full h-auto mx-auto object-contain transition-transform duration-300 hover:scale-105">
+            <div onclick="openModal('modalTKE')"
+                class="cursor-pointer bg-[#fdf0e7] p-6 rounded-xl shadow-md text-center hover:ring-4 hover:ring-orange-500 hover:ring-opacity-20 transition transform hover:scale-105 h-full flex items-center justify-center">
+                <img src="/public/img/marcas/TKE.png" alt="Logo TKE"
+                    class="max-h-28 max-w-40 w-full h-auto mx-auto object-contain transition-transform duration-300 hover:scale-105">
             </div>
             <!-- Otis -->
-            <div onclick="openModal('modalOtis')" class="cursor-pointer bg-[#ebeffa] p-6 rounded-xl shadow-md text-center hover:ring-4 hover:ring-orange-500 hover:ring-opacity-20 transition transform hover:scale-105 h-full flex items-center justify-center">
-                <img src="/public/img/marcas/otis.png" alt="Logo Otis" class="max-h-28 max-w-40 w-full h-auto mx-auto object-contain transition-transform duration-300 hover:scale-105">
+            <div onclick="openModal('modalOtis')"
+                class="cursor-pointer bg-[#ebeffa] p-6 rounded-xl shadow-md text-center hover:ring-4 hover:ring-orange-500 hover:ring-opacity-20 transition transform hover:scale-105 h-full flex items-center justify-center">
+                <img src="/public/img/marcas/otis.png" alt="Logo Otis"
+                    class="max-h-28 max-w-40 w-full h-auto mx-auto object-contain transition-transform duration-300 hover:scale-105">
             </div>
             <!-- Fermator -->
-            <div onclick="openModal('modalFermator')" class="cursor-pointer bg-[#e6f0f2] p-6 rounded-xl shadow-md text-center hover:ring-4 hover:ring-orange-500 hover:ring-opacity-20 transition transform hover:scale-105 h-full flex items-center justify-center">
-                <img src="/public/img/marcas/fermator.png" alt="Logo Fermator" class="max-h-28 max-w-40 w-full h-auto mx-auto object-contain transition-transform duration-300 hover:scale-105">
+            <div onclick="openModal('modalFermator')"
+                class="cursor-pointer bg-[#e6f0f2] p-6 rounded-xl shadow-md text-center hover:ring-4 hover:ring-orange-500 hover:ring-opacity-20 transition transform hover:scale-105 h-full flex items-center justify-center">
+                <img src="/public/img/marcas/fermator.png" alt="Logo Fermator"
+                    class="max-h-28 max-w-40 w-full h-auto mx-auto object-contain transition-transform duration-300 hover:scale-105">
             </div>
             <!-- Diversas -->
-            <a href="https://lista.mercadolivre.com.br/_CustId_114944990" target="_blank" rel="noopener noreferrer" class="cursor-pointer bg-[#f5f5f5] p-6 rounded-xl shadow-md text-center hover:ring-4 hover:ring-orange-500 hover:ring-opacity-20 transition transform hover:scale-105 h-full flex items-center justify-center">
-                <img src="/public/img/marcas/diversas.png" alt="Logo Diversas" class="max-h-28 max-w-40 w-full h-auto mx-auto object-contain transition-transform duration-300 hover:scale-105">
+            <a href="https://lista.mercadolivre.com.br/_CustId_114944990" target="_blank" rel="noopener noreferrer"
+                class="cursor-pointer bg-[#f5f5f5] p-6 rounded-xl shadow-md text-center hover:ring-4 hover:ring-orange-500 hover:ring-opacity-20 transition transform hover:scale-105 h-full flex items-center justify-center">
+                <img src="/public/img/marcas/diversas.png" alt="Logo Diversas"
+                    class="max-h-28 max-w-40 w-full h-auto mx-auto object-contain transition-transform duration-300 hover:scale-105">
             </a>
 
         </div>
 
         <!-- Modal Wittur -->
-        <div id="modalWittur" onclick="closeModalOutside(event, 'modalWittur')" class="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 hidden flex justify-center items-center">
+        <div id="modalWittur" onclick="closeModalOutside(event, 'modalWittur')"
+            class="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 hidden flex justify-center items-center">
 
-            <div id="modalWitturContent" class="bg-[#e8f3f1] p-8 rounded-2xl shadow-2xl w-full max-w-4xl relative scale-95 opacity-0 transition-all duration-300" onclick="event.stopPropagation();">
+            <div id="modalWitturContent"
+                class="bg-[#e8f3f1] p-8 rounded-2xl shadow-2xl w-full max-w-4xl relative scale-95 opacity-0 transition-all duration-300"
+                onclick="event.stopPropagation();">
 
                 <!-- Botão Fechar -->
-                <button onclick="closeModal('modalWittur')" class="absolute top-3 right-4 text-gray-500 hover:text-gray-800 text-2xl font-bold">&times;</button>
+                <button onclick="closeModal('modalWittur')"
+                    class="absolute top-3 right-4 text-gray-500 hover:text-gray-800 text-2xl font-bold">&times;</button>
 
                 <!-- Título -->
-                <img src="/public/img/marcas/wittur.png" alt="Logo TKE" class="max-h-20 max-w-40 w-full h-auto mx-auto object-contain transition-transform duration-300 hover:scale-105 mb-6">
+                <img src="/public/img/marcas/wittur.png" alt="Logo TKE"
+                    class="max-h-20 max-w-40 w-full h-auto mx-auto object-contain transition-transform duration-300 hover:scale-105 mb-6">
                 <div class="w-full border-t-2 my-3"></div>
                 <!-- Imagem Desktop -->
-                <img src="/public/img/itenswittur/bannerPC.png" alt="Motor" class="hidden sm:block w-128 h-80 object-cover mx-auto" loading="lazy">
+                <img src="/public/img/itenswittur/bannerPC.png" alt="Motor"
+                    class="hidden sm:block w-128 h-80 object-cover mx-auto" loading="lazy">
 
                 <!-- Imagem Mobile -->
-                <img src="/public/img/itenswittur/bannerMobile.png" alt="Motor" class="block sm:hidden w-full max-w-xs object-cover mx-auto" loading="lazy">
+                <img src="/public/img/itenswittur/bannerMobile.png" alt="Motor"
+                    class="block sm:hidden w-full max-w-xs object-cover mx-auto" loading="lazy">
 
                 <!-- Botão -->
-                <a href="https://wa.me/555197664066" target="_blank" class="block text-center bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xl py-3 px-4 rounded-lg transition duration-300 ease-in-out mt-4">
+                <a href="https://wa.me/555197664066" target="_blank"
+                    class="block text-center bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xl py-3 px-4 rounded-lg transition duration-300 ease-in-out mt-4">
                     Solicite um orçamento
                 </a>
             </div>
         </div>
 
         <!-- Modal Atlas Schindler -->
-        <div id="modalAtlas" onclick="closeModalOutside(event, 'modalAtlas')" class="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 hidden flex justify-center items-center">
+        <div id="modalAtlas" onclick="closeModalOutside(event, 'modalAtlas')"
+            class="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 hidden flex justify-center items-center">
 
-            <div id="modalAtlasContent" class="bg-[#fcecec] p-8 rounded-2xl shadow-2xl w-full max-w-4xl relative scale-95 opacity-0 transition-all duration-300" onclick="event.stopPropagation();">
+            <div id="modalAtlasContent"
+                class="bg-[#fcecec] p-8 rounded-2xl shadow-2xl w-full max-w-4xl relative scale-95 opacity-0 transition-all duration-300"
+                onclick="event.stopPropagation();">
 
                 <!-- Botão Fechar -->
-                <button onclick="closeModal('modalAtlas')" class="absolute top-3 right-4 text-gray-500 hover:text-gray-800 text-2xl font-bold">&times;</button>
+                <button onclick="closeModal('modalAtlas')"
+                    class="absolute top-3 right-4 text-gray-500 hover:text-gray-800 text-2xl font-bold">&times;</button>
 
                 <!-- Título -->
-                <img src="/public/img/marcas/atlas_Schindler.png" alt="Logo TKE" class="max-h-30 max-w-40 w-full h-auto mx-auto object-contain transition-transform duration-300 hover:scale-105 mb-6">
+                <img src="/public/img/marcas/atlas_Schindler.png" alt="Logo TKE"
+                    class="max-h-30 max-w-40 w-full h-auto mx-auto object-contain transition-transform duration-300 hover:scale-105 mb-6">
                 <div class="w-full border-t-2 my-3"></div>
                 <!-- Imagem Desktop -->
-                <img src="/public/img/itensatlasschindler/bannerPC.png" alt="Motor" class="hidden sm:block w-128 h-80 object-cover mx-auto" loading="lazy">
+                <img src="/public/img/itensatlasschindler/bannerPC.png" alt="Motor"
+                    class="hidden sm:block w-128 h-80 object-cover mx-auto" loading="lazy">
 
                 <!-- Imagem Mobile -->
-                <img src="/public/img/itensatlasschindler/bannerMobile.png" alt="Motor" class="block sm:hidden w-full max-w-xs object-cover mx-auto" loading="lazy">
+                <img src="/public/img/itensatlasschindler/bannerMobile.png" alt="Motor"
+                    class="block sm:hidden w-full max-w-xs object-cover mx-auto" loading="lazy">
 
                 <!-- Botão -->
-                <a href="https://wa.me/555197664066" target="_blank" class="block text-center bg-red-500 hover:bg-red-600 text-white font-bold text-xl py-3 px-4 rounded-lg transition duration-300 ease-in-out mt-4">
+                <a href="https://wa.me/555197664066" target="_blank"
+                    class="block text-center bg-red-500 hover:bg-red-600 text-white font-bold text-xl py-3 px-4 rounded-lg transition duration-300 ease-in-out mt-4">
                     Solicite um orçamento
                 </a>
             </div>
         </div>
 
         <!-- Modal TKE -->
-        <div id="modalTKE" onclick="closeModalOutside(event, 'modalTKE')" class="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 hidden flex justify-center items-center">
+        <div id="modalTKE" onclick="closeModalOutside(event, 'modalTKE')"
+            class="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 hidden flex justify-center items-center">
 
-            <div id="modalTKEContent" class="bg-[#fdf0e7] p-8 rounded-2xl shadow-2xl w-full max-w-4xl relative scale-95 opacity-0 transition-all duration-300" onclick="event.stopPropagation();">
+            <div id="modalTKEContent"
+                class="bg-[#fdf0e7] p-8 rounded-2xl shadow-2xl w-full max-w-4xl relative scale-95 opacity-0 transition-all duration-300"
+                onclick="event.stopPropagation();">
 
                 <!-- Botão Fechar -->
-                <button onclick="closeModal('modalTKE')" class="absolute top-3 right-4 text-gray-500 hover:text-gray-800 text-2xl font-bold">&times;</button>
+                <button onclick="closeModal('modalTKE')"
+                    class="absolute top-3 right-4 text-gray-500 hover:text-gray-800 text-2xl font-bold">&times;</button>
 
                 <!-- Título -->
-                <img src="/public/img/marcas/TKE.png" alt="Logo TKE" class="max-h-12 max-w-30 w-full h-auto mx-auto object-contain transition-transform duration-300 hover:scale-105 mb-6">
+                <img src="/public/img/marcas/TKE.png" alt="Logo TKE"
+                    class="max-h-12 max-w-30 w-full h-auto mx-auto object-contain transition-transform duration-300 hover:scale-105 mb-6">
                 <div class="w-full border-t-2 my-3"></div>
                 <!-- Imagem Desktop -->
-                <img src="/public/img/itenstke/bannerPC.png" alt="Motor" class="hidden sm:block w-128 h-80 object-cover mx-auto" loading="lazy">
+                <img src="/public/img/itenstke/bannerPC.png" alt="Motor"
+                    class="hidden sm:block w-128 h-80 object-cover mx-auto" loading="lazy">
 
                 <!-- Imagem Mobile -->
-                <img src="/public/img/itenstke/bannerMobile.png" alt="Motor" class="block sm:hidden w-full max-w-xs object-cover mx-auto" loading="lazy">
+                <img src="/public/img/itenstke/bannerMobile.png" alt="Motor"
+                    class="block sm:hidden w-full max-w-xs object-cover mx-auto" loading="lazy">
 
                 <!-- Botão -->
-                <a href="https://wa.me/555197664066" target="_blank" class="block text-center bg-orange-500 hover:bg-orange-600 text-white font-bold text-xl py-3 px-4 rounded-lg transition duration-300 ease-in-out mt-4">
+                <a href="https://wa.me/555197664066" target="_blank"
+                    class="block text-center bg-orange-500 hover:bg-orange-600 text-white font-bold text-xl py-3 px-4 rounded-lg transition duration-300 ease-in-out mt-4">
                     Solicite um orçamento
                 </a>
             </div>
         </div>
 
         <!-- Modal Otis -->
-        <div id="modalOtis" onclick="closeModalOutside(event, 'modalOtis')" class="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 hidden flex justify-center items-center">
+        <div id="modalOtis" onclick="closeModalOutside(event, 'modalOtis')"
+            class="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 hidden flex justify-center items-center">
 
-            <div id="modalOtisContent" class="bg-[#ebeffa] p-8 rounded-2xl shadow-2xl w-full max-w-4xl relative scale-95 opacity-0 transition-all duration-300" onclick="event.stopPropagation();">
+            <div id="modalOtisContent"
+                class="bg-[#ebeffa] p-8 rounded-2xl shadow-2xl w-full max-w-4xl relative scale-95 opacity-0 transition-all duration-300"
+                onclick="event.stopPropagation();">
 
                 <!-- Botão Fechar -->
-                <button onclick="closeModal('modalOtis')" class="absolute top-3 right-4 text-gray-500 hover:text-gray-800 text-2xl font-bold">&times;</button>
+                <button onclick="closeModal('modalOtis')"
+                    class="absolute top-3 right-4 text-gray-500 hover:text-gray-800 text-2xl font-bold">&times;</button>
 
                 <!-- Título -->
-                <img src="/public/img/marcas/otis.png" alt="Logo TKE" class="max-h-12 max-w-30 w-full h-auto mx-auto object-contain transition-transform duration-300 hover:scale-105 mb-6">
+                <img src="/public/img/marcas/otis.png" alt="Logo TKE"
+                    class="max-h-12 max-w-30 w-full h-auto mx-auto object-contain transition-transform duration-300 hover:scale-105 mb-6">
                 <div class="w-full border-t-2 my-3"></div>
                 <!-- Imagem Desktop -->
-                <img src="/public/img/itensotis/bannerPC.png" alt="Motor" class="hidden sm:block w-128 h-80 object-cover mx-auto" loading="lazy">
+                <img src="/public/img/itensotis/bannerPC.png" alt="Motor"
+                    class="hidden sm:block w-128 h-80 object-cover mx-auto" loading="lazy">
 
                 <!-- Imagem Mobile -->
-                <img src="/public/img/itensotis/bannerMobile.png" alt="Motor" class="block sm:hidden w-full max-w-xs object-cover mx-auto" loading="lazy">
+                <img src="/public/img/itensotis/bannerMobile.png" alt="Motor"
+                    class="block sm:hidden w-full max-w-xs object-cover mx-auto" loading="lazy">
 
 
                 <!-- Botão -->
-                <a href="https://wa.me/555197664066" target="_blank" class="block text-center bg-blue-600 hover:bg-blue-700 text-white font-bold text-xl py-3 px-4 rounded-lg transition duration-300 ease-in-out mt-4">
+                <a href="https://wa.me/555197664066" target="_blank"
+                    class="block text-center bg-blue-600 hover:bg-blue-700 text-white font-bold text-xl py-3 px-4 rounded-lg transition duration-300 ease-in-out mt-4">
                     Solicite um orçamento
                 </a>
             </div>
         </div>
 
         <!-- Modal Fermator -->
-        <div id="modalFermator" onclick="closeModalOutside(event, 'modalFermator')" class="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 hidden flex justify-center items-center">
+        <div id="modalFermator" onclick="closeModalOutside(event, 'modalFermator')"
+            class="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 hidden flex justify-center items-center">
 
-            <div id="modalFermatorContent" class="bg-[#e6f0f2] p-8 rounded-2xl shadow-2xl w-full max-w-4xl relative scale-95 opacity-0 transition-all duration-300" onclick="event.stopPropagation();">
+            <div id="modalFermatorContent"
+                class="bg-[#e6f0f2] p-8 rounded-2xl shadow-2xl w-full max-w-4xl relative scale-95 opacity-0 transition-all duration-300"
+                onclick="event.stopPropagation();">
 
                 <!-- Botão Fechar -->
-                <button onclick="closeModal('modalFermator')" class="absolute top-3 right-4 text-gray-500 hover:text-gray-800 text-2xl font-bold">&times;</button>
+                <button onclick="closeModal('modalFermator')"
+                    class="absolute top-3 right-4 text-gray-500 hover:text-gray-800 text-2xl font-bold">&times;</button>
 
                 <!-- Título -->
-                <img src="/public/img/marcas/fermator.png" alt="Logo TKE" class="max-h-12 max-w-30 w-full h-auto mx-auto object-contain transition-transform duration-300 hover:scale-105 mb-6">
+                <img src="/public/img/marcas/fermator.png" alt="Logo TKE"
+                    class="max-h-12 max-w-30 w-full h-auto mx-auto object-contain transition-transform duration-300 hover:scale-105 mb-6">
                 <div class="w-full border-t-2 my-3"></div>
                 <!-- Imagem Desktop -->
-                <img src="/public/img/itensfermator/bannerPC.png" alt="Motor" class="hidden sm:block w-128 h-80 object-cover mx-auto" loading="lazy">
+                <img src="/public/img/itensfermator/bannerPC.png" alt="Motor"
+                    class="hidden sm:block w-128 h-80 object-cover mx-auto" loading="lazy">
 
                 <!-- Imagem Mobile -->
-                <img src="/public/img/itensfermator/bannerMobile.png" alt="Motor" class="block sm:hidden w-full max-w-xs object-cover mx-auto" loading="lazy">
+                <img src="/public/img/itensfermator/bannerMobile.png" alt="Motor"
+                    class="block sm:hidden w-full max-w-xs object-cover mx-auto" loading="lazy">
 
                 <!-- Botão -->
-                <a href="https://wa.me/555197664066" target="_blank" class="block text-center bg-cyan-700 hover:bg-cyan-800 text-white font-bold text-xl py-3 px-4 rounded-lg transition duration-300 ease-in-out mt-4">
+                <a href="https://wa.me/555197664066" target="_blank"
+                    class="block text-center bg-cyan-700 hover:bg-cyan-800 text-white font-bold text-xl py-3 px-4 rounded-lg transition duration-300 ease-in-out mt-4">
                     Solicite um orçamento
                 </a>
             </div>
         </div>
 
         <!-- Modal Unidigital -->
-        <div id="modalUnidigital" onclick="closeModalOutside(event, 'modalUnidigital')" class="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 hidden flex justify-center items-center">
+        <div id="modalUnidigital" onclick="closeModalOutside(event, 'modalUnidigital')"
+            class="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 hidden flex justify-center items-center">
 
-            <div id="modalUnidigitalContent" class="bg-[#f2f0f7] p-8 rounded-2xl shadow-2xl w-full max-w-4xl relative scale-95 opacity-0 transition-all duration-300" onclick="event.stopPropagation();">
+            <div id="modalUnidigitalContent"
+                class="bg-[#f2f0f7] p-8 rounded-2xl shadow-2xl w-full max-w-4xl relative scale-95 opacity-0 transition-all duration-300"
+                onclick="event.stopPropagation();">
 
                 <!-- Botão Fechar -->
-                <button onclick="closeModal('modalUnidigital')" class="absolute top-3 right-4 text-gray-500 hover:text-gray-800 text-2xl font-bold">&times;</button>
+                <button onclick="closeModal('modalUnidigital')"
+                    class="absolute top-3 right-4 text-gray-500 hover:text-gray-800 text-2xl font-bold">&times;</button>
 
                 <!-- Título -->
-                <img src="/public/img/marcas/unidigital.png" alt="Logo TKE" class="max-h-12 max-w-30 w-full h-auto mx-auto object-contain transition-transform duration-300 hover:scale-105 mb-6">
+                <img src="/public/img/marcas/unidigital.png" alt="Logo TKE"
+                    class="max-h-12 max-w-30 w-full h-auto mx-auto object-contain transition-transform duration-300 hover:scale-105 mb-6">
                 <div class="w-full border-t-2 my-3"></div>
                 <!-- Imagem Desktop -->
-                <img src="/public/img/itensunidigital/bannerPC.png" alt="Motor" class="hidden sm:block w-128 h-80 object-cover mx-auto" loading="lazy">
+                <img src="/public/img/itensunidigital/bannerPC.png" alt="Motor"
+                    class="hidden sm:block w-128 h-80 object-cover mx-auto" loading="lazy">
 
                 <!-- Imagem Mobile -->
-                <img src="/public/img/itensunidigital/bannerMobile.png" alt="Motor" class="block sm:hidden w-full max-w-xs object-cover mx-auto" loading="lazy">
+                <img src="/public/img/itensunidigital/bannerMobile.png" alt="Motor"
+                    class="block sm:hidden w-full max-w-xs object-cover mx-auto" loading="lazy">
 
                 <!-- Botão -->
-                <a href="https://wa.me/555197664066" target="_blank" class="block text-center bg-purple-700 hover:bg-purple-800 text-white font-bold text-xl py-3 px-4 rounded-lg transition duration-300 ease-in-out mt-4">
+                <a href="https://wa.me/555197664066" target="_blank"
+                    class="block text-center bg-purple-700 hover:bg-purple-800 text-white font-bold text-xl py-3 px-4 rounded-lg transition duration-300 ease-in-out mt-4">
                     Solicite um orçamento
                 </a>
 
@@ -523,12 +633,16 @@
         </div>
 
         <!-- Modal Diversas -->
-        <div id="modalDiversas" onclick="closeModalOutside(event, 'modalDiversas')" class="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 hidden flex justify-center items-center">
+        <div id="modalDiversas" onclick="closeModalOutside(event, 'modalDiversas')"
+            class="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 hidden flex justify-center items-center">
 
-            <div id="modalDiversasContent" class="bg-[#f5f5f5] p-8 rounded-2xl shadow-2xl w-full max-w-4xl relative scale-95 opacity-0 transition-all duration-300" onclick="event.stopPropagation();">
+            <div id="modalDiversasContent"
+                class="bg-[#f5f5f5] p-8 rounded-2xl shadow-2xl w-full max-w-4xl relative scale-95 opacity-0 transition-all duration-300"
+                onclick="event.stopPropagation();">
 
                 <!-- Botão Fechar -->
-                <button onclick="closeModal('modalDiversas')" class="absolute top-3 right-4 text-gray-500 hover:text-gray-800 text-2xl font-bold">&times;</button>
+                <button onclick="closeModal('modalDiversas')"
+                    class="absolute top-3 right-4 text-gray-500 hover:text-gray-800 text-2xl font-bold">&times;</button>
 
                 <!-- Título -->
                 <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Peças Diversas</h2>
@@ -536,21 +650,25 @@
                 <!-- Itens -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-6 place-items-center">
                     <div class="flex flex-col items-center">
-                        <img src="/public/img/produtos/painel.jpg" alt="Painel" class="w-32 h-32 object-cover rounded shadow mx-auto">
+                        <img src="/public/img/produtos/painel.jpg" alt="Painel"
+                            class="w-32 h-32 object-cover rounded shadow mx-auto">
                         <span class="text-sm mt-2">Painel</span>
                     </div>
                     <div class="flex flex-col items-center">
-                        <img src="/public/img/produtos/motor.jpg" alt="Motor" class="w-32 h-32 object-cover rounded shadow mx-auto">
+                        <img src="/public/img/produtos/motor.jpg" alt="Motor"
+                            class="w-32 h-32 object-cover rounded shadow mx-auto">
                         <span class="text-sm mt-2">Motor</span>
                     </div>
                     <div class="flex flex-col items-center">
-                        <img src="/public/img/produtos/outros.jpg" alt="Outros" class="w-32 h-32 object-cover rounded shadow mx-auto">
+                        <img src="/public/img/produtos/outros.jpg" alt="Outros"
+                            class="w-32 h-32 object-cover rounded shadow mx-auto">
                         <span class="text-sm mt-2">Outros</span>
                     </div>
                 </div>
 
                 <!-- Botão -->
-                <a href="https://wa.me/555197664066" target="_blank" class="block text-center bg-gray-800 hover:bg-gray-900 text-white font-bold py-3 px-5 rounded-lg transition">
+                <a href="https://wa.me/555197664066" target="_blank"
+                    class="block text-center bg-gray-800 hover:bg-gray-900 text-white font-bold py-3 px-5 rounded-lg transition">
                     Solicite um orçamento
                 </a>
             </div>
@@ -605,31 +723,37 @@
 
                 <div>
                     <label for="nome" class="block text-gray-700 font-semibold mb-2">Nome Completo *</label>
-                    <input type="text" id="nome" name="nome" required class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-500">
+                    <input type="text" id="nome" name="nome" required
+                        class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-500">
                 </div>
 
                 <div>
                     <label for="telefone" class="block text-gray-700 font-semibold mb-2">Telefone *</label>
-                    <input type="text" id="telefone" name="telefone" required class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-500">
+                    <input type="text" id="telefone" name="telefone" required
+                        class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-500">
                 </div>
 
                 <div>
                     <label for="email" class="block text-gray-700 font-semibold mb-2">E-mail *</label>
-                    <input type="email" id="email" name="email" required class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-500">
+                    <input type="email" id="email" name="email" required
+                        class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-500">
                 </div>
 
                 <div>
                     <label for="assunto" class="block text-gray-700 font-semibold mb-2">Assunto</label>
-                    <input type="text" id="assunto" name="assunto" class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-500">
+                    <input type="text" id="assunto" name="assunto"
+                        class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-500">
                 </div>
 
                 <div>
                     <label for="mensagem" class="block text-gray-700 font-semibold mb-2">Mensagem *</label>
-                    <textarea id="mensagem" name="mensagem" required rows="5" class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-500"></textarea>
+                    <textarea id="mensagem" name="mensagem" required rows="5"
+                        class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-500"></textarea>
                 </div>
 
                 <div class="text-center">
-                    <button type="submit" class="bg-orange-500 text-white font-bold py-3 px-6 rounded hover:bg-orange-600 transition">
+                    <button type="submit"
+                        class="bg-orange-500 text-white font-bold py-3 px-6 rounded hover:bg-orange-600 transition">
                         Enviar
                     </button>
                 </div>
@@ -670,7 +794,8 @@
             <div>
                 <h2 class="text-2xl font-bold text-orange-500 mb-4">MULTIPARTS</h2>
                 <p class="text-gray-400 leading-relaxed">
-                    Fundada em 2022 e localizada em Guaíba/RS, a MULTIPARTS é especialista em peças para elevadores multimarcas. Levamos qualidade, agilidade e confiança para todo o Brasil.
+                    Fundada em 2022 e localizada em Guaíba/RS, a MULTIPARTS é especialista em peças para elevadores
+                    multimarcas. Levamos qualidade, agilidade e confiança para todo o Brasil.
                 </p>
             </div>
 
@@ -686,19 +811,24 @@
 
         <!-- Redes Sociais -->
         <div class="flex justify-center items-center gap-6 mt-6">
-            <a href="https://lista.mercadolivre.com.br/_CustId_114944990" target="_blank" aria-label="Mercado Livre" class="transform transition duration-300 hover:scale-110 hover:drop-shadow-[0_0_5px_#f97316]">
+            <a href="https://lista.mercadolivre.com.br/_CustId_114944990" target="_blank" aria-label="Mercado Livre"
+                class="transform transition duration-300 hover:scale-110 hover:drop-shadow-[0_0_5px_#f97316]">
                 <img src="/public/img/icons/mercadolivre.png" alt="Mercado Livre" class="h-8 w-8">
             </a>
 
-            <a href="https://wa.me/555197664066" target="_blank" aria-label="WhatsApp" class="transform transition duration-300 hover:scale-110 hover:drop-shadow-[0_0_5px_#f97316]">
+            <a href="https://wa.me/555197664066" target="_blank" aria-label="WhatsApp"
+                class="transform transition duration-300 hover:scale-110 hover:drop-shadow-[0_0_5px_#f97316]">
                 <img src="/public/img/icons/whatsapp.png" alt="WhatsApp" class="h-8 w-8">
             </a>
 
-            <a href="https://www.instagram.com/multipartspecas?igsh=MTNkcnNpMGc5bXBxbA==" target="_blank" aria-label="Instagram" class="transform transition duration-300 hover:scale-110 hover:drop-shadow-[0_0_5px_#f97316]">
+            <a href="https://www.instagram.com/multipartspecas?igsh=MTNkcnNpMGc5bXBxbA==" target="_blank"
+                aria-label="Instagram"
+                class="transform transition duration-300 hover:scale-110 hover:drop-shadow-[0_0_5px_#f97316]">
                 <img src="/public/img/icons/instagram.png" alt="Instagram" class="h-8 w-8">
             </a>
 
-            <a href="https://www.facebook.com/share/15qZtV9Wjq/" target="_blank" aria-label="Facebook" class="transform transition duration-300 hover:scale-110 hover:drop-shadow-[0_0_5px_#f97316]">
+            <a href="https://www.facebook.com/share/15qZtV9Wjq/" target="_blank" aria-label="Facebook"
+                class="transform transition duration-300 hover:scale-110 hover:drop-shadow-[0_0_5px_#f97316]">
                 <img src="/public/img/icons/facebook.png" alt="Facebook" class="h-8 w-8">
             </a>
 
@@ -722,11 +852,14 @@
             hover:shadow-[0_0_25px_rgba(0,123,255,0.5)]
             transition-all duration-300 group">
 
-                <span class="text-blue-500 text-xs md:text-sm font-[Roboto_Mono] tracking-wide group-hover:brightness-110">
+                <span
+                    class="text-blue-500 text-xs md:text-sm font-[Roboto_Mono] tracking-wide group-hover:brightness-110">
                     Desenvolvido por
                 </span>
 
-                <img src="/public/img/codarynlogo.png" alt="Logo Codaryn" class="h-6 md:h-8 w-auto opacity-90 transition duration-300 group-hover:opacity-100 group-hover:brightness-125" loading="lazy">
+                <img src="/public/img/codarynlogo.png" alt="Logo Codaryn"
+                    class="h-6 md:h-8 w-auto opacity-90 transition duration-300 group-hover:opacity-100 group-hover:brightness-125"
+                    loading="lazy">
             </a>
         </div>
 
@@ -743,7 +876,8 @@
         w-14 h-14 md:w-16 md:h-16
         rounded-full bg-orange-500 text-white shadow-lg
         hover:bg-orange-600 transition">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 md:w-7 md:h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 md:w-7 md:h-7" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
         </svg>
     </a>
@@ -798,10 +932,10 @@
         }); // .3 = tempo de porta abrindo
 
         tl.to([logoD, logoM], {
-                opacity: 1,
-                duration: .4,
-                ease: "power1.out"
-            }) // fade-in
+            opacity: 1,
+            duration: .4,
+            ease: "power1.out"
+        }) // fade-in
             .to([logoD, logoM], {
                 y: -40,
                 duration: .7,
@@ -818,7 +952,8 @@
 </script>
 
 <!-- GSAP CDN -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-…" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-…"
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <script>
     // animação de “pulo” infinito
