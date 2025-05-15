@@ -1,0 +1,10 @@
+# Ignorar arquivos e pastas sensíveis
+.vscode/
+.env
+node_modules/
+public/img/segredo/
+public/private/
+src/
+*.log
+*.bak
+.DS_Store
