@@ -389,22 +389,13 @@
     <section id="catalogo" class="py-16 px-6 bg-gray-50">
         <!--h2 class="text-3xl font-bold text-center mb-12">Escolha a Marca do Elevador</h2 -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto auto-rows-[180px]">
-            <!-- Unidigital – -->
-            <div onclick="openModal('modalUnidigital')" class="cursor-pointer bg-[#f2f0f7] p-6 rounded-xl shadow-md text-center
-         hover:ring-4 hover:ring-orange-500 hover:ring-opacity-20
-         transition transform hover:scale-105 h-full flex items-center justify-center
-         sm:col-span-2 md:col-span-3 lg:col-span-3">
-                <img src="/public/img/marcas/unidigital.png" alt="Logo Unidigital" class="max-h-20 max-w-50 w-full h-auto mx-auto object-contain
-              transition-transform duration-300 hover:scale-105">
-            </div>
 
-
-            <!-- Wittur -->
-            <div onclick="openModal('modalWittur')"
-                class="cursor-pointer bg-[#e8f3f1] p-6 rounded-xl shadow-md text-center hover:ring-4 hover:ring-orange-500 hover:ring-opacity-20 transition transform hover:scale-105 h-full flex items-center justify-center">
-                <img src="/public/img/marcas/wittur.png" alt="Logo Wittur"
+            <!-- Diversas -->
+            <a href="https://lista.mercadolivre.com.br/_CustId_114944990" target="_blank" rel="noopener noreferrer"
+                class="cursor-pointer bg-[#f5f5f5] p-6 rounded-xl shadow-md text-center hover:ring-4 hover:ring-orange-500 hover:ring-opacity-20 transition transform hover:scale-105 h-full flex items-center justify-center">
+                <img src="/public/img/marcas/diversas.png" alt="Logo Diversas"
                     class="max-h-28 max-w-40 w-full h-auto mx-auto object-contain transition-transform duration-300 hover:scale-105">
-            </div>
+            </a>
             <!-- Atlas Schindler -->
             <div onclick="openModal('modalAtlas')"
                 class="cursor-pointer bg-[#fcecec] p-6 rounded-xl shadow-md text-center hover:ring-4 hover:ring-orange-500 hover:ring-opacity-20 transition transform hover:scale-105 h-full flex items-center justify-center">
@@ -429,14 +420,19 @@
                 <img src="/public/img/marcas/fermator.png" alt="Logo Fermator"
                     class="max-h-28 max-w-40 w-full h-auto mx-auto object-contain transition-transform duration-300 hover:scale-105">
             </div>
-            <!-- Diversas -->
-            <a href="https://lista.mercadolivre.com.br/_CustId_114944990" target="_blank" rel="noopener noreferrer"
-                class="cursor-pointer bg-[#f5f5f5] p-6 rounded-xl shadow-md text-center hover:ring-4 hover:ring-orange-500 hover:ring-opacity-20 transition transform hover:scale-105 h-full flex items-center justify-center">
-                <img src="/public/img/marcas/diversas.png" alt="Logo Diversas"
+
+
+            <!-- Wittur -->
+            <div onclick="openModal('modalWittur')"
+                class="cursor-pointer bg-[#e8f3f1] p-6 rounded-xl shadow-md text-center hover:ring-4 hover:ring-orange-500 hover:ring-opacity-20 transition transform hover:scale-105 h-full flex items-center justify-center">
+                <img src="/public/img/marcas/wittur.png" alt="Logo Wittur"
                     class="max-h-28 max-w-40 w-full h-auto mx-auto object-contain transition-transform duration-300 hover:scale-105">
-            </a>
+            </div>
 
         </div>
+
+
+
 
         <!-- Modal Wittur -->
         <div id="modalWittur" onclick="closeModalOutside(event, 'modalWittur')"
